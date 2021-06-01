@@ -10,7 +10,10 @@ module ai_constants
   implicit none
   private
 
-  parameter, public :: kFloat  = kind( 1.0e0 )
-  parameter, public :: kDouble = kind( 1.0d0 )
+  !> @name Primitive type kinds
+  !! @{
+  integer, parameter, public :: kFloat  = kind( 1.0e0 )
+  integer, parameter, public :: kDouble = kind( 1.0d0 )
+  !> @}
 
 end module ai_constants

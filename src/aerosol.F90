@@ -20,8 +20,8 @@ module ai_aerosol
   type, abstract :: aerosol_t
     private
   contains
-    procedure(get_optics_accessor), deferred :: optics_accessor
-    procedure(get_optics),          deferred :: get_optics
+    procedure(optics_accessor),  deferred :: optics_accessor
+    procedure(get_optics),       deferred :: get_optics
   end type aerosol_t
 
 interface
@@ -37,27 +37,26 @@ interface
   !!
   !! If the grid or optical properties cannot be calculated, the aerosol
   !! model should fail the run.
-  function register_optics_accessor( this, wavelength_grid,                   &
-      optical_properties ) result( optics_accessor )
+  function optics_accessor( this, optics )
     use ai_accessor,                   only : accessor_t
     use ai_optics,                     only : optics_t
     import aerosol_t
-    class(accessor_t)                     :: optics_accessor
+    class(accessor_t), pointer   :: optics_accessor
     class(aerosol_t), intent(in) :: this
     class(optics_t),  intent(in) :: optics
-  end function register_optics_accessor
+  end function optics_accessor
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-  !> Calculates a set of optical properties
-  subroutine get_optics( this, accessor, environmental_state, optics )
+  !> Returns optical properties on the grid specified in the accessor.
+  subroutine get_optics( this, optics_accessor, environmental_state, optics )
     use ai_accessor,                   only : accessor_t
     use ai_environmental_state,        only : environmental_state_t
     use ai_optics,                     only : optics_t
     import aerosol_t
     class(aerosol_t),             intent(in)    :: this
     class(accessor_t),            intent(in)    :: optics_accessor
-    class(environmental_state_t), intent(in)    :: envrionmental_state
+    class(environmental_state_t), intent(in)    :: environmental_state
     class(optics_t),              intent(inout) :: optics
   end subroutine get_optics
 
