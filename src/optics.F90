@@ -23,8 +23,8 @@ module ai_optics
     type(wavelength_grid_t) :: grid_
     !> Set of optical properties
     type(property_t), allocatable :: properties_(:)
-    !> Optical property values (wavelength bin, property, layer, column)
-    real(kind=kDouble), allocatable, public :: values_(:,:,:,:)
+    !> Optical property values (wavelength bin, property)
+    real(kind=kDouble), allocatable, public :: values_(:,:)
   contains
     procedure :: number_of_properties
     procedure :: property_name
@@ -40,21 +40,16 @@ contains
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
   !> Constructs optics_t objects for a given grid and property set
-  function constructor( properties, grid, number_of_columns,                  &
-      number_of_layers ) result( new_obj )
+  function constructor( properties, grid ) result( new_obj )
 
     type(optics_t)                      :: new_obj
     type(property_t),        intent(in) :: properties(:)
     type(wavelength_grid_t), intent(in) :: grid
-    integer,                 intent(in) :: number_of_columns
-    integer,                 intent(in) :: number_of_layers
 
     new_obj%grid_ = grid
     new_obj%properties_ = properties
     allocate( new_obj%values_( grid%number_of_bins( ),                        &
-                               size( new_obj%properties_ ),                   &
-                               number_of_layers,                              &
-                               number_of_columns ) )
+                               size( new_obj%properties_ ) ) )
 
   end function constructor
 

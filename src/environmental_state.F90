@@ -12,8 +12,9 @@ module ai_environmental_state
 
   public :: environmental_state_t
 
-  !> Environmental state data needed by aerosol models
+  !> A collection of indenendent environmental states
   type :: environmental_state_t
+    private
   end type environmental_state_t
 
 end module ai_environmental_state
