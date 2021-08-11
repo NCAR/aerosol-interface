@@ -19,6 +19,7 @@ module ai_aerosol_state
     procedure(raw_size),   deferred :: raw_size
     procedure(load_state), deferred :: load_state
     procedure(dump_state), deferred :: dump_state
+    procedure(randomize),  deferred :: randomize
   end type aerosol_state_t
 
 interface
@@ -35,9 +36,6 @@ interface
 
   !> Loads raw state data into the aerosol_state_t object
   !!
-  !! The index argument specifies the start of the state data in raw_state
-  !! and will be advanced by the size of the aerosol state.
-  !!
   !! An aerosol scheme may operate on the raw data in place or copy it to
   !! internal data structures.
   subroutine load_state( this, raw_state, index )
@@ -45,26 +43,48 @@ interface
     import aerosol_state_t
     class(aerosol_state_t),         intent(inout) :: this
     real(kind=kDouble),     target, intent(inout) :: raw_state(:)
-    integer,                        intent(inout) :: index
+    !> The index argument can be used to specify the starting index in
+    !! raw_state to use for the aerosol state data and will be advanced by the
+    !! size of the aerosol state. If it is not included the starting index
+    !! will be assumed to be 1.
+    integer, optional,              intent(inout) :: index
   end subroutine load_state
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
   !> Dumps the raw state data to a double array
   !!
-  !! The index argument specifies the starting index in raw_state to dump the
-  !! aerosol state data and will be advanced by the size of the aerosol state.
-  !!
   !! If the aerosol module operates on the raw data in place, pointer
   !! associations should be dropped. If the aerosol state is contained in
   !! internal data structures, it should be copied to the raw data array.
+  !!
+  !! \todo consider dropping copy option and removing raw_state from this
+  !!       function. If the calling function passes a different array or
+  !!       slice than it passed to the load_state( ) function, pointer-
+  !!       associated aerosol_state_t classes will not update this raw_state
   subroutine dump_state( this, raw_state, index )
     use ai_constants,                  only : kDouble
     import aerosol_state_t
     class(aerosol_state_t), intent(inout) :: this
     real(kind=kDouble),     intent(inout) :: raw_state(:)
-    integer,                intent(inout) :: index
+    !> The index argument can be used to specify the starting index in
+    !! raw_state to dump the aerosol state data and will be advanced by the
+    !! size of the aerosol state. If it is not included the starting index
+    !! will be assumed to be 1.
+    integer, optional,      intent(inout) :: index
   end subroutine dump_state
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+  !> Sets the aerosol state to a random, but reasonable, state.
+  !!
+  !! For testing only. This subroutine should only accept initialized states
+  !! to randomize (i.e. those created by an aerosol_t object's get_new_state()
+  !! function).
+  subroutine randomize( this )
+    import aerosol_state_t
+    class(aerosol_state_t), intent(inout) :: this
+  end subroutine randomize
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 

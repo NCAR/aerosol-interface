@@ -21,6 +21,7 @@ module ai_environmental_state
   contains
     procedure :: set_layer_thickness__Pa
     procedure :: layer_thickness__Pa
+    procedure :: randomize
   end type environmental_state_t
 
 contains
@@ -47,6 +48,21 @@ contains
     layer_thickness__Pa = this%layer_thickness__Pa_
 
   end function layer_thickness__Pa
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+  !> Set the environmental state to random, but reasonable, values
+  subroutine randomize( this )
+
+    class(environmental_state_t), intent(inout) :: this
+
+    real(kind=kDouble) :: rand_val
+
+    !> \todo make sure random environmental values are reasonable
+    call random_number( rand_val )
+    this%layer_thickness__Pa_ = rand_val * 50.0 + 50.0
+
+  end subroutine randomize
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
