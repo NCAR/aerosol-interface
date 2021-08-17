@@ -23,6 +23,7 @@ module ai_aerosol
     procedure(get_new_state),   deferred :: get_new_state
     procedure(optics_accessor), deferred :: optics_accessor
     procedure(get_optics),      deferred :: get_optics
+    procedure(print_state),     deferred :: print_state
   end type aerosol_t
 
 interface
@@ -73,6 +74,18 @@ interface
     class(aerosol_state_t),       intent(in)    :: aerosol_state
     class(optics_t),              intent(inout) :: optics
   end subroutine get_optics
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+  !> Outputs text describing the current aerosol state
+  subroutine print_state( this, aerosol_state, io_unit )
+    use ai_aerosol_state,              only : aerosol_state_t
+    import aerosol_t
+    class(aerosol_t),       intent(in) :: this
+    class(aerosol_state_t), intent(in) :: aerosol_state
+    !> Optional output unit (defaults to 6)
+    integer, optional,      intent(in) :: io_unit
+  end subroutine print_state
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
