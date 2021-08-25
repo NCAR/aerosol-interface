@@ -7,9 +7,9 @@
 !> The optics_t type and related functions
 module ai_optics
 
-  use ai_constants,                    only : kDouble
-  use ai_property,                     only : property_t
-  use ai_wavelength_grid,              only : wavelength_grid_t
+  use musica_constants,                only : musica_dk
+  use musica_property_set,             only : property_set_t
+  use musica_wavelength_grid,          only : wavelength_grid_t
 
   implicit none
   private
@@ -22,12 +22,11 @@ module ai_optics
     !> Wavelength grid to store optical properties on
     type(wavelength_grid_t) :: grid_
     !> Set of optical properties
-    type(property_t), allocatable :: properties_(:)
+    type(property_set_t), pointer :: properties_
     !> Optical property values (wavelength bin, property)
-    real(kind=kDouble), allocatable, public :: values_(:,:)
+    real(kind=musica_dk), allocatable, public :: values_(:,:)
   contains
-    procedure :: number_of_properties
-    procedure :: property_name
+    procedure :: property_set
     procedure :: grid
   end type optics_t
 
@@ -43,44 +42,29 @@ contains
   function constructor( properties, grid ) result( new_obj )
 
     type(optics_t)                      :: new_obj
-    type(property_t),        intent(in) :: properties(:)
+    type(property_set_t),    intent(in) :: properties
     type(wavelength_grid_t), intent(in) :: grid
 
     new_obj%grid_ = grid
+    allocate( new_obj%properties_ )
     new_obj%properties_ = properties
     allocate( new_obj%values_( grid%number_of_bins( ),                        &
-                               size( new_obj%properties_ ) ) )
+                               new_obj%properties_%size( ) ) )
 
   end function constructor
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-  !> Returns the number of properties in the set
-  integer function number_of_properties( this )
+  !> Returns the set of optics properties
+  function property_set( this )
 
-    class(optics_t), intent(in) :: this
+    type(property_set_t), pointer    :: property_set
+    class(optics_t),      intent(in) :: this
 
-    number_of_properties = size( this%properties_ )
+    allocate( property_set )
+    property_set = this%properties_
 
-  end function number_of_properties
-
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-  !> Returns the name of the property at a given index
-  function property_name( this, property_index )
-
-    character(len=:), allocatable :: property_name
-    class(optics_t),  intent(in)  :: this
-    integer,          intent(in)  :: property_index
-
-    if( property_index .lt. 1 .or.                                            &
-        property_index .gt. size( this%properties_ ) ) then
-      property_name = "undefined"
-    else
-      property_name = this%properties_( property_index )%name( )
-    end if
-
-  end function property_name
+  end function property_set
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 

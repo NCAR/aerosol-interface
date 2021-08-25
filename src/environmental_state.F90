@@ -7,7 +7,7 @@
 !> The environmental_state_t type and related functions
 module ai_environmental_state
 
-  use ai_constants,                    only : kDouble
+  use musica_constants,                only : musica_dk
 
   implicit none
   private
@@ -17,7 +17,7 @@ module ai_environmental_state
   !> A collection of indenendent environmental states
   type :: environmental_state_t
     private
-    real(kind=kDouble) :: layer_thickness__Pa_ = 0.0_kDouble
+    real(kind=musica_dk) :: layer_thickness__Pa_ = 0.0_musica_dk
   contains
     procedure :: set_layer_thickness__Pa
     procedure :: layer_thickness__Pa
@@ -32,7 +32,7 @@ contains
   subroutine set_layer_thickness__Pa( this, layer_thickness__Pa )
 
     class(environmental_state_t), intent(inout) :: this
-    real(kind=kDouble),           intent(in)    :: layer_thickness__Pa
+    real(kind=musica_dk),         intent(in)    :: layer_thickness__Pa
 
     this%layer_thickness__Pa_ = layer_thickness__Pa
 
@@ -41,7 +41,7 @@ contains
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
   !> Returns the layer thickness [Pa]
-  real(kind=kDouble) elemental function layer_thickness__Pa( this )
+  real(kind=musica_dk) elemental function layer_thickness__Pa( this )
 
     class(environmental_state_t), intent(in) :: this
 
@@ -56,7 +56,7 @@ contains
 
     class(environmental_state_t), intent(inout) :: this
 
-    real(kind=kDouble) :: rand_val
+    real(kind=musica_dk) :: rand_val
 
     !> \todo make sure random environmental values are reasonable
     call random_number( rand_val )

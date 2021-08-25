@@ -52,16 +52,16 @@ set(NETCDF_LIBS ${NETCDF_LIB} ${NETCDF_FORTRAN_LIB})
 include_directories(${NETCDF_INCLUDE_DIR})
 
 ################################################################################
-# Aerosol-interface library
-
-add_subdirectory(src)
-include_directories(${CMAKE_BINARY_DIR}/src)
-
-################################################################################
 # musica-core library
 
 add_subdirectory(libs/musica-core/src)
 include_directories(${CMAKE_BINARY_DIR}/libs/musica-core/src)
+
+################################################################################
+# Aerosol-interface library
+
+add_subdirectory(src)
+include_directories(${CMAKE_BINARY_DIR}/src)
 
 ################################################################################
 # Aerosol-interface tests

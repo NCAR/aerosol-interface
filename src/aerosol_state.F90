@@ -39,15 +39,15 @@ interface
   !! An aerosol scheme may operate on the raw data in place or copy it to
   !! internal data structures.
   subroutine load_state( this, raw_state, index )
-    use ai_constants,                  only : kDouble
+    use musica_constants,              only : musica_dk
     import aerosol_state_t
-    class(aerosol_state_t),         intent(inout) :: this
-    real(kind=kDouble),     target, intent(inout) :: raw_state(:)
+    class(aerosol_state_t),           intent(inout) :: this
+    real(kind=musica_dk),     target, intent(inout) :: raw_state(:)
     !> The index argument can be used to specify the starting index in
     !! raw_state to use for the aerosol state data and will be advanced by the
     !! size of the aerosol state. If it is not included the starting index
     !! will be assumed to be 1.
-    integer, optional,              intent(inout) :: index
+    integer, optional,                intent(inout) :: index
   end subroutine load_state
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -63,10 +63,10 @@ interface
   !!       slice than it passed to the load_state( ) function, pointer-
   !!       associated aerosol_state_t classes will not update this raw_state
   subroutine dump_state( this, raw_state, index )
-    use ai_constants,                  only : kDouble
+    use musica_constants,              only : musica_dk
     import aerosol_state_t
     class(aerosol_state_t), intent(inout) :: this
-    real(kind=kDouble),     intent(inout) :: raw_state(:)
+    real(kind=musica_dk),   intent(inout) :: raw_state(:)
     !> The index argument can be used to specify the starting index in
     !! raw_state to dump the aerosol state data and will be advanced by the
     !! size of the aerosol state. If it is not included the starting index
