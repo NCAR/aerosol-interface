@@ -1,0 +1,8 @@
+# ignore all
+*
+
+# add things to copy
+!CMakeLists.txt
+!libs/
+!src/
+!test/
