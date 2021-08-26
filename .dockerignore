@@ -3,6 +3,7 @@
 
 # add things to copy
 !CMakeLists.txt
+!cmake-modules/
 !libs/
 !src/
 !test/
