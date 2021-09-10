@@ -7,9 +7,9 @@
 !> The optics_t type and related functions
 module ai_optics
 
+  use ai_wavelength_grid,              only : wavelength_grid_t
   use musica_constants,                only : musica_dk
   use musica_property_set,             only : property_set_t
-  use musica_wavelength_grid,          only : wavelength_grid_t
 
   implicit none
   private
@@ -48,7 +48,7 @@ contains
     new_obj%grid_ = grid
     allocate( new_obj%properties_ )
     new_obj%properties_ = properties
-    allocate( new_obj%values_( grid%number_of_bins( ),                        &
+    allocate( new_obj%values_( grid%number_of_sections( ),                    &
                                new_obj%properties_%size( ) ) )
 
   end function constructor
