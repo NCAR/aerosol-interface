@@ -11,7 +11,6 @@ module ai_optics
   use ai_wavelength_grid,              only : wavelength_grid_t
   use musica_constants,                only : musica_dk
   use musica_interpolator,             only : interpolator_t
-  use musica_property_set,             only : property_set_t
 
   implicit none
   private
