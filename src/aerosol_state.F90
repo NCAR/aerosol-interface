@@ -36,13 +36,13 @@ interface
 
   !> Loads raw state data into the aerosol_state_t object
   !!
-  !! An aerosol scheme may operate on the raw data in place or copy it to
-  !! internal data structures.
+  !! Aerosol schemes should copy the raw state into their own internal data
+  !! structures.
   subroutine load_state( this, raw_state, index )
     use musica_constants,              only : musica_dk
     import aerosol_state_t
     class(aerosol_state_t),           intent(inout) :: this
-    real(kind=musica_dk),     target, intent(inout) :: raw_state(:)
+    real(kind=musica_dk),             intent(in)    :: raw_state(:)
     !> The index argument can be used to specify the starting index in
     !! raw_state to use for the aerosol state data and will be advanced by the
     !! size of the aerosol state. If it is not included the starting index
@@ -54,14 +54,8 @@ interface
 
   !> Dumps the raw state data to a double array
   !!
-  !! If the aerosol module operates on the raw data in place, pointer
-  !! associations should be dropped. If the aerosol state is contained in
-  !! internal data structures, it should be copied to the raw data array.
-  !!
-  !! \todo consider dropping copy option and removing raw_state from this
-  !!       function. If the calling function passes a different array or
-  !!       slice than it passed to the load_state( ) function, pointer-
-  !!       associated aerosol_state_t classes will not update this raw_state
+  !! Aerosol schemes should copy data from their own internal data
+  !! structures to the raw state array
   subroutine dump_state( this, raw_state, index )
     use musica_constants,              only : musica_dk
     import aerosol_state_t
