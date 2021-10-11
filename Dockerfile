@@ -8,6 +8,7 @@ RUN dnf -y update \
         cmake \
         make \
         gcovr \
+        valgrind \
     && dnf clean all
 
 # copy the aerosol interface code
