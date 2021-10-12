@@ -38,13 +38,15 @@ module ai_optics
     procedure(units),         deferred :: units
     procedure :: native_grid
     procedure :: output_grid
-    procedure :: accessor
+    procedure :: accessor => get_accessor
     procedure :: reset_values
     procedure :: add_values
     procedure :: set_values
     procedure :: get_values
     !> Private constructor - should only be called by extending types
     procedure :: private_constructor
+    !> Private finalization - should only be called by extending types
+    procedure :: private_finalize
   end type optics_t
 
   !> Pointer to optical property objects
@@ -105,14 +107,14 @@ contains
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
   !> Returns a pointer to the aerosol-model-specific accessor information
-  function accessor( this )
+  subroutine get_accessor( this, accessor )
 
-    class(accessor_t), pointer    :: accessor
-    class(optics_t),   intent(in) :: this
+    class(optics_t),            intent(in)  :: this
+    class(accessor_t), pointer, intent(out) :: accessor
 
     accessor => this%accessor_
 
-  end function accessor
+  end subroutine get_accessor
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -195,6 +197,17 @@ contains
     end if
 
   end subroutine private_constructor
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+  !> Finalization for optics_t objects
+  subroutine private_finalize( this )
+
+    class(optics_t), intent(inout) :: this
+
+    if( associated( this%accessor_ ) ) deallocate( this%accessor_ )
+
+  end subroutine private_finalize
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 

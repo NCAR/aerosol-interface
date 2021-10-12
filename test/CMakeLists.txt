@@ -13,6 +13,9 @@ endmacro(add_std_test)
 add_executable(environmental_state environmental_state.F90)
 add_std_test(environmental_state)
 
+add_executable(optics optics.F90)
+add_std_test(optics)
+
 add_executable(wavelength_grid wavelength_grid.F90)
 add_std_test(wavelength_grid)
 
