@@ -16,6 +16,21 @@ add_std_test(environmental_state)
 add_executable(optics optics.F90)
 add_std_test(optics)
 
+add_executable(optics_absorption_optical_depth optics/absorption_optical_depth.F90)
+add_std_test(optics_absorption_optical_depth)
+
+add_executable(optics_asymmetry_factor optics/asymmetry_factor.F90)
+add_std_test(optics_asymmetry_factor)
+
+add_executable(optics_extinction_optical_depth optics/extinction_optical_depth.F90)
+add_std_test(optics_extinction_optical_depth)
+
+add_executable(optics_forward_scattered_fraction optics/forward_scattered_fraction.F90)
+add_std_test(optics_forward_scattered_fraction)
+
+add_executable(optics_single_scatter_albedo optics/single_scatter_albedo.F90)
+add_std_test(optics_single_scatter_albedo)
+
 add_executable(wavelength_grid wavelength_grid.F90)
 add_std_test(wavelength_grid)
 

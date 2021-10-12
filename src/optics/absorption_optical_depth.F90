@@ -18,6 +18,7 @@ module ai_optics_absorption_optical_depth
   contains
     procedure :: name => property_name
     procedure :: units
+    final :: finalize
   end type optics_absorption_optical_depth_t
 
   interface optics_absorption_optical_depth_t
@@ -75,6 +76,17 @@ contains
     units = "unitless"
 
   end function units
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+  !> Finalize the optics object
+  subroutine finalize( this )
+
+    type(optics_absorption_optical_depth_t), intent(inout) :: this
+
+    call this%private_finalize( )
+
+  end subroutine finalize
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
