@@ -14,8 +14,10 @@ jobs:
     - name: build Docker image
       run: docker build -t aerosol-test .
     - name: run tests in container
-      run: docker run -t aerosol-test bash -c 'cd build; make coverage'
+      run: docker run --name test-container -t aerosol-test bash -c 'cd build; make coverage'
+    - name: copy coverage from container
+      run: docker cp test-container:build/coverage.xml .
     - uses: codecov/codecov-action@v2
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
-        files: build/coverage.xml
+        files: coverage.xml
