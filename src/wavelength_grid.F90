@@ -66,11 +66,11 @@ contains
     if( present( base_unit ) ) then
       select case( base_unit )
       case( kCentimeter )
-        scale_factor = 1.0e-2
+        scale_factor = 1.0e-2_musica_dk
       case( kMeter )
-        scale_factor = 1.0
+        scale_factor = 1.0_musica_dk
       case( kNanometer )
-        scale_factor = 1.0e-9
+        scale_factor = 1.0e-9_musica_dk
       case default
         call die_msg( 531934235, "Invalid units for wavelength grid" )
       end select
@@ -85,8 +85,8 @@ contains
       adjusted_lower_bounds = lower_bounds(:) * scale_factor
       adjusted_upper_bounds = upper_bounds(:) * scale_factor
     case( kWavenumber )
-      adjusted_lower_bounds = 1.0/lower_bounds(:) * scale_factor
-      adjusted_upper_bounds = 1.0/upper_bounds(:) * scale_factor
+      adjusted_lower_bounds = 1.0_musica_dk/( lower_bounds(:) * scale_factor )
+      adjusted_upper_bounds = 1.0_musica_dk/( upper_bounds(:) * scale_factor )
     case default
       call die_msg( 135687402, "Invalid wavelength grid bounds" )
     end select
