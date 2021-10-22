@@ -59,7 +59,7 @@ interface
   subroutine dump_state( this, raw_state, index )
     use musica_constants,              only : musica_dk
     import aerosol_state_t
-    class(aerosol_state_t), intent(inout) :: this
+    class(aerosol_state_t), intent(in)    :: this
     real(kind=musica_dk),   intent(inout) :: raw_state(:)
     !> The index argument can be used to specify the starting index in
     !! raw_state to dump the aerosol state data and will be advanced by the
