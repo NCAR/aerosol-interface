@@ -1,3 +1,13 @@
+doc/*.gv
+doc/*.pdf
+doc/html/
+doc/latex/
+
+build/
+**/.DS_Store
+**/CMakeCache.txt
+**/CMakeFiles/
+
 # Prerequisites
 *.d
 
