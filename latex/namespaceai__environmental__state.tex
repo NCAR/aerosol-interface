@@ -1,0 +1,75 @@
+\hypertarget{namespaceai__environmental__state}{}\doxysection{ai\+\_\+environmental\+\_\+state Module Reference}
+\label{namespaceai__environmental__state}\index{ai\_environmental\_state@{ai\_environmental\_state}}
+
+
+The \mbox{\hyperlink{structai__environmental__state_1_1environmental__state__t}{environmental\+\_\+state\+\_\+t}} type and related functions.  
+
+
+\doxysubsection*{Data Types}
+\begin{DoxyCompactItemize}
+\item 
+type \mbox{\hyperlink{structai__environmental__state_1_1environmental__state__t}{environmental\+\_\+state\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em A collection of indenendent environmental states. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions/\+Subroutines}
+\begin{DoxyCompactItemize}
+\item 
+real(kind=musica\+\_\+dk) elemental function \mbox{\hyperlink{namespaceai__environmental__state_a0445a2835fc7cb0dc4d1f8432c5352b7}{layer\+\_\+thickness\+\_\+\+\_\+pa}} (this)
+\begin{DoxyCompactList}\small\item\em Returns the layer thickness \mbox{[}Pa\mbox{]}. \end{DoxyCompactList}\item 
+subroutine \mbox{\hyperlink{namespaceai__environmental__state_aa7ca7a392b7ea79cdb52ab358d2c4c8a}{randomize}} (this)
+\begin{DoxyCompactList}\small\item\em Set the environmental state to random, but reasonable, values. \end{DoxyCompactList}\item 
+subroutine \mbox{\hyperlink{namespaceai__environmental__state_a5416f6a9c6aa9ddf2570e3141877380b}{set\+\_\+layer\+\_\+thickness\+\_\+\+\_\+pa}} (this, layer\+\_\+thickness\+\_\+\+\_\+\+Pa)
+\begin{DoxyCompactList}\small\item\em Sets the layer thickness \mbox{[}Pa\mbox{]}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{structai__environmental__state_1_1environmental__state__t}{environmental\+\_\+state\+\_\+t}} type and related functions. 
+
+\doxysubsection{Function/\+Subroutine Documentation}
+\mbox{\Hypertarget{namespaceai__environmental__state_a0445a2835fc7cb0dc4d1f8432c5352b7}\label{namespaceai__environmental__state_a0445a2835fc7cb0dc4d1f8432c5352b7}} 
+\index{ai\_environmental\_state@{ai\_environmental\_state}!layer\_thickness\_\_pa@{layer\_thickness\_\_pa}}
+\index{layer\_thickness\_\_pa@{layer\_thickness\_\_pa}!ai\_environmental\_state@{ai\_environmental\_state}}
+\doxysubsubsection{\texorpdfstring{layer\_thickness\_\_pa()}{layer\_thickness\_\_pa()}}
+{\footnotesize\ttfamily real(kind=musica\+\_\+dk) elemental function ai\+\_\+environmental\+\_\+state\+::layer\+\_\+thickness\+\_\+\+\_\+pa (\begin{DoxyParamCaption}\item[{class(\mbox{\hyperlink{structai__environmental__state_1_1environmental__state__t}{environmental\+\_\+state\+\_\+t}}), intent(in)}]{this }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Returns the layer thickness \mbox{[}Pa\mbox{]}. 
+
+
+
+Definition at line 44 of file environmental\+\_\+state.\+F90.
+
+
+
+Referenced by set\+\_\+layer\+\_\+thickness\+\_\+\+\_\+pa().
+
+\mbox{\Hypertarget{namespaceai__environmental__state_aa7ca7a392b7ea79cdb52ab358d2c4c8a}\label{namespaceai__environmental__state_aa7ca7a392b7ea79cdb52ab358d2c4c8a}} 
+\index{ai\_environmental\_state@{ai\_environmental\_state}!randomize@{randomize}}
+\index{randomize@{randomize}!ai\_environmental\_state@{ai\_environmental\_state}}
+\doxysubsubsection{\texorpdfstring{randomize()}{randomize()}}
+{\footnotesize\ttfamily subroutine ai\+\_\+environmental\+\_\+state\+::randomize (\begin{DoxyParamCaption}\item[{class(\mbox{\hyperlink{structai__environmental__state_1_1environmental__state__t}{environmental\+\_\+state\+\_\+t}}), intent(inout)}]{this }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Set the environmental state to random, but reasonable, values. 
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000004}{Todo}}]make sure ranges of random environmental values are reasonable \end{DoxyRefDesc}
+
+
+Definition at line 55 of file environmental\+\_\+state.\+F90.
+
+\mbox{\Hypertarget{namespaceai__environmental__state_a5416f6a9c6aa9ddf2570e3141877380b}\label{namespaceai__environmental__state_a5416f6a9c6aa9ddf2570e3141877380b}} 
+\index{ai\_environmental\_state@{ai\_environmental\_state}!set\_layer\_thickness\_\_pa@{set\_layer\_thickness\_\_pa}}
+\index{set\_layer\_thickness\_\_pa@{set\_layer\_thickness\_\_pa}!ai\_environmental\_state@{ai\_environmental\_state}}
+\doxysubsubsection{\texorpdfstring{set\_layer\_thickness\_\_pa()}{set\_layer\_thickness\_\_pa()}}
+{\footnotesize\ttfamily subroutine ai\+\_\+environmental\+\_\+state\+::set\+\_\+layer\+\_\+thickness\+\_\+\+\_\+pa (\begin{DoxyParamCaption}\item[{class(\mbox{\hyperlink{structai__environmental__state_1_1environmental__state__t}{environmental\+\_\+state\+\_\+t}}), intent(inout)}]{this,  }\item[{real(kind=musica\+\_\+dk), intent(in)}]{layer\+\_\+thickness\+\_\+\+\_\+\+Pa }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Sets the layer thickness \mbox{[}Pa\mbox{]}. 
+
+
+
+Definition at line 32 of file environmental\+\_\+state.\+F90.
+

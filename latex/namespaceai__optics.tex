@@ -1,0 +1,191 @@
+\hypertarget{namespaceai__optics}{}\doxysection{ai\+\_\+optics Module Reference}
+\label{namespaceai__optics}\index{ai\_optics@{ai\_optics}}
+
+
+The \mbox{\hyperlink{structai__optics_1_1optics__t}{optics\+\_\+t}} type and related functions.  
+
+
+\doxysubsection*{Data Types}
+\begin{DoxyCompactItemize}
+\item 
+type \mbox{\hyperlink{structai__optics_1_1optics__ptr}{optics\+\_\+ptr}}
+\begin{DoxyCompactList}\small\item\em Pointer to optical property objects. \end{DoxyCompactList}\item 
+type \mbox{\hyperlink{structai__optics_1_1optics__t}{optics\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em An optical property. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interfaceai__optics_1_1property__name}{property\+\_\+name}}
+\begin{DoxyCompactList}\small\item\em Returns the name of the optical property. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interfaceai__optics_1_1units}{units}}
+\begin{DoxyCompactList}\small\item\em Returns the units for the optical property. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions/\+Subroutines}
+\begin{DoxyCompactItemize}
+\item 
+subroutine \mbox{\hyperlink{namespaceai__optics_ae37b37e335e9516e5fe326a97c72d918}{add\+\_\+values}} (this, values)
+\begin{DoxyCompactList}\small\item\em Adds values to the existing set of values for the optical property. \end{DoxyCompactList}\item 
+subroutine \mbox{\hyperlink{namespaceai__optics_a35760393ef3330ae1f6a7c11e919a310}{get\+\_\+accessor}} (this, accessor)
+\begin{DoxyCompactList}\small\item\em Returns a pointer to the aerosol-\/model-\/specific accessor information. \end{DoxyCompactList}\item 
+subroutine \mbox{\hyperlink{namespaceai__optics_a8f648cc7ccdd8797e4c6dbb49c1671ad}{get\+\_\+values}} (this, values)
+\begin{DoxyCompactList}\small\item\em Returns the values of the optical property on the output grid. \end{DoxyCompactList}\item 
+type(\mbox{\hyperlink{structai__wavelength__grid_1_1wavelength__grid__t}{wavelength\+\_\+grid\+\_\+t}}) function \mbox{\hyperlink{namespaceai__optics_a6e7f78c9db1903c94637bca7c217966a}{native\+\_\+grid}} (this)
+\begin{DoxyCompactList}\small\item\em Returns the grid on which the optical property is calculated. \end{DoxyCompactList}\item 
+subroutine \mbox{\hyperlink{namespaceai__optics_af34172fa12586ca22ee10f0c81ea0474}{optics\+\_\+ptr\+\_\+finalize}} (this)
+\begin{DoxyCompactList}\small\item\em Finalization for \mbox{\hyperlink{structai__optics_1_1optics__t}{optics\+\_\+t}} pointer. \end{DoxyCompactList}\item 
+type(\mbox{\hyperlink{structai__wavelength__grid_1_1wavelength__grid__t}{wavelength\+\_\+grid\+\_\+t}}) function \mbox{\hyperlink{namespaceai__optics_aab4e0c94223f4083cc739cbec64f03c3}{output\+\_\+grid}} (this)
+\begin{DoxyCompactList}\small\item\em Returns the grid on which the optical property is output. \end{DoxyCompactList}\item 
+subroutine \mbox{\hyperlink{namespaceai__optics_a0c3129be953310c51454eb75503db91c}{private\+\_\+constructor}} (this, \mbox{\hyperlink{namespaceai__optics_a6e7f78c9db1903c94637bca7c217966a}{native\+\_\+grid}}, \mbox{\hyperlink{namespaceai__optics_aab4e0c94223f4083cc739cbec64f03c3}{output\+\_\+grid}}, accessor, interpolation\+\_\+strategy)
+\begin{DoxyCompactList}\small\item\em General constructor of \mbox{\hyperlink{structai__optics_1_1optics__t}{optics\+\_\+t}} objects. \end{DoxyCompactList}\item 
+subroutine \mbox{\hyperlink{namespaceai__optics_a7485608bc24592672e3324aba4305d98}{private\+\_\+finalize}} (this)
+\begin{DoxyCompactList}\small\item\em Finalization for \mbox{\hyperlink{structai__optics_1_1optics__t}{optics\+\_\+t}} objects. \end{DoxyCompactList}\item 
+subroutine \mbox{\hyperlink{namespaceai__optics_a4a345dfafbb025df7a94b60c956a3487}{reset\+\_\+values}} (this)
+\begin{DoxyCompactList}\small\item\em Resets the values of the optical property. \end{DoxyCompactList}\item 
+subroutine \mbox{\hyperlink{namespaceai__optics_aa334527f926ce32a61b4272d6b50c0ec}{set\+\_\+values}} (this, values)
+\begin{DoxyCompactList}\small\item\em Sets the values of the optical property on the native grid. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{structai__optics_1_1optics__t}{optics\+\_\+t}} type and related functions. 
+
+\doxysubsection{Function/\+Subroutine Documentation}
+\mbox{\Hypertarget{namespaceai__optics_ae37b37e335e9516e5fe326a97c72d918}\label{namespaceai__optics_ae37b37e335e9516e5fe326a97c72d918}} 
+\index{ai\_optics@{ai\_optics}!add\_values@{add\_values}}
+\index{add\_values@{add\_values}!ai\_optics@{ai\_optics}}
+\doxysubsubsection{\texorpdfstring{add\_values()}{add\_values()}}
+{\footnotesize\ttfamily subroutine ai\+\_\+optics\+::add\+\_\+values (\begin{DoxyParamCaption}\item[{class(\mbox{\hyperlink{structai__optics_1_1optics__t}{optics\+\_\+t}}), intent(inout)}]{this,  }\item[{real(kind=musica\+\_\+dk), dimension(\+:), intent(in)}]{values }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Adds values to the existing set of values for the optical property. 
+
+
+
+Definition at line 133 of file optics.\+F90.
+
+\mbox{\Hypertarget{namespaceai__optics_a35760393ef3330ae1f6a7c11e919a310}\label{namespaceai__optics_a35760393ef3330ae1f6a7c11e919a310}} 
+\index{ai\_optics@{ai\_optics}!get\_accessor@{get\_accessor}}
+\index{get\_accessor@{get\_accessor}!ai\_optics@{ai\_optics}}
+\doxysubsubsection{\texorpdfstring{get\_accessor()}{get\_accessor()}}
+{\footnotesize\ttfamily subroutine ai\+\_\+optics\+::get\+\_\+accessor (\begin{DoxyParamCaption}\item[{class(\mbox{\hyperlink{structai__optics_1_1optics__t}{optics\+\_\+t}}), intent(in)}]{this,  }\item[{class(\mbox{\hyperlink{structai__accessor_1_1accessor__t}{accessor\+\_\+t}}), intent(out), pointer}]{accessor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Returns a pointer to the aerosol-\/model-\/specific accessor information. 
+
+
+
+Definition at line 110 of file optics.\+F90.
+
+\mbox{\Hypertarget{namespaceai__optics_a8f648cc7ccdd8797e4c6dbb49c1671ad}\label{namespaceai__optics_a8f648cc7ccdd8797e4c6dbb49c1671ad}} 
+\index{ai\_optics@{ai\_optics}!get\_values@{get\_values}}
+\index{get\_values@{get\_values}!ai\_optics@{ai\_optics}}
+\doxysubsubsection{\texorpdfstring{get\_values()}{get\_values()}}
+{\footnotesize\ttfamily subroutine ai\+\_\+optics\+::get\+\_\+values (\begin{DoxyParamCaption}\item[{class(\mbox{\hyperlink{structai__optics_1_1optics__t}{optics\+\_\+t}}), intent(in)}]{this,  }\item[{real(kind=musica\+\_\+dk), dimension(\+:), intent(out)}]{values }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Returns the values of the optical property on the output grid. 
+
+
+
+Definition at line 157 of file optics.\+F90.
+
+\mbox{\Hypertarget{namespaceai__optics_a6e7f78c9db1903c94637bca7c217966a}\label{namespaceai__optics_a6e7f78c9db1903c94637bca7c217966a}} 
+\index{ai\_optics@{ai\_optics}!native\_grid@{native\_grid}}
+\index{native\_grid@{native\_grid}!ai\_optics@{ai\_optics}}
+\doxysubsubsection{\texorpdfstring{native\_grid()}{native\_grid()}}
+{\footnotesize\ttfamily type(\mbox{\hyperlink{structai__wavelength__grid_1_1wavelength__grid__t}{wavelength\+\_\+grid\+\_\+t}}) function ai\+\_\+optics\+::native\+\_\+grid (\begin{DoxyParamCaption}\item[{class(\mbox{\hyperlink{structai__optics_1_1optics__t}{optics\+\_\+t}}), intent(in)}]{this }\end{DoxyParamCaption})}
+
+
+
+Returns the grid on which the optical property is calculated. 
+
+
+
+Definition at line 88 of file optics.\+F90.
+
+\mbox{\Hypertarget{namespaceai__optics_af34172fa12586ca22ee10f0c81ea0474}\label{namespaceai__optics_af34172fa12586ca22ee10f0c81ea0474}} 
+\index{ai\_optics@{ai\_optics}!optics\_ptr\_finalize@{optics\_ptr\_finalize}}
+\index{optics\_ptr\_finalize@{optics\_ptr\_finalize}!ai\_optics@{ai\_optics}}
+\doxysubsubsection{\texorpdfstring{optics\_ptr\_finalize()}{optics\_ptr\_finalize()}}
+{\footnotesize\ttfamily subroutine ai\+\_\+optics\+::optics\+\_\+ptr\+\_\+finalize (\begin{DoxyParamCaption}\item[{type(\mbox{\hyperlink{structai__optics_1_1optics__ptr}{optics\+\_\+ptr}}), intent(inout)}]{this }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Finalization for \mbox{\hyperlink{structai__optics_1_1optics__t}{optics\+\_\+t}} pointer. 
+
+
+
+Definition at line 215 of file optics.\+F90.
+
+
+
+Referenced by ai\+\_\+optics\+::optics\+\_\+ptr\+::optics\+\_\+ptr\+\_\+finalize().
+
+\mbox{\Hypertarget{namespaceai__optics_aab4e0c94223f4083cc739cbec64f03c3}\label{namespaceai__optics_aab4e0c94223f4083cc739cbec64f03c3}} 
+\index{ai\_optics@{ai\_optics}!output\_grid@{output\_grid}}
+\index{output\_grid@{output\_grid}!ai\_optics@{ai\_optics}}
+\doxysubsubsection{\texorpdfstring{output\_grid()}{output\_grid()}}
+{\footnotesize\ttfamily type(\mbox{\hyperlink{structai__wavelength__grid_1_1wavelength__grid__t}{wavelength\+\_\+grid\+\_\+t}}) function ai\+\_\+optics\+::output\+\_\+grid (\begin{DoxyParamCaption}\item[{class(\mbox{\hyperlink{structai__optics_1_1optics__t}{optics\+\_\+t}}), intent(in)}]{this }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Returns the grid on which the optical property is output. 
+
+
+
+Definition at line 99 of file optics.\+F90.
+
+\mbox{\Hypertarget{namespaceai__optics_a0c3129be953310c51454eb75503db91c}\label{namespaceai__optics_a0c3129be953310c51454eb75503db91c}} 
+\index{ai\_optics@{ai\_optics}!private\_constructor@{private\_constructor}}
+\index{private\_constructor@{private\_constructor}!ai\_optics@{ai\_optics}}
+\doxysubsubsection{\texorpdfstring{private\_constructor()}{private\_constructor()}}
+{\footnotesize\ttfamily subroutine ai\+\_\+optics\+::private\+\_\+constructor (\begin{DoxyParamCaption}\item[{class(\mbox{\hyperlink{structai__optics_1_1optics__t}{optics\+\_\+t}}), intent(inout)}]{this,  }\item[{type(\mbox{\hyperlink{structai__wavelength__grid_1_1wavelength__grid__t}{wavelength\+\_\+grid\+\_\+t}}), intent(in)}]{native\+\_\+grid,  }\item[{type(\mbox{\hyperlink{structai__wavelength__grid_1_1wavelength__grid__t}{wavelength\+\_\+grid\+\_\+t}}), intent(in)}]{output\+\_\+grid,  }\item[{class(\mbox{\hyperlink{structai__accessor_1_1accessor__t}{accessor\+\_\+t}}), intent(in), optional}]{accessor,  }\item[{procedure(interpolation\+\_\+strategy\+\_\+i), optional}]{interpolation\+\_\+strategy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+General constructor of \mbox{\hyperlink{structai__optics_1_1optics__t}{optics\+\_\+t}} objects. 
+
+
+
+Definition at line 173 of file optics.\+F90.
+
+\mbox{\Hypertarget{namespaceai__optics_a7485608bc24592672e3324aba4305d98}\label{namespaceai__optics_a7485608bc24592672e3324aba4305d98}} 
+\index{ai\_optics@{ai\_optics}!private\_finalize@{private\_finalize}}
+\index{private\_finalize@{private\_finalize}!ai\_optics@{ai\_optics}}
+\doxysubsubsection{\texorpdfstring{private\_finalize()}{private\_finalize()}}
+{\footnotesize\ttfamily subroutine ai\+\_\+optics\+::private\+\_\+finalize (\begin{DoxyParamCaption}\item[{class(\mbox{\hyperlink{structai__optics_1_1optics__t}{optics\+\_\+t}}), intent(inout)}]{this }\end{DoxyParamCaption})}
+
+
+
+Finalization for \mbox{\hyperlink{structai__optics_1_1optics__t}{optics\+\_\+t}} objects. 
+
+
+
+Definition at line 204 of file optics.\+F90.
+
+\mbox{\Hypertarget{namespaceai__optics_a4a345dfafbb025df7a94b60c956a3487}\label{namespaceai__optics_a4a345dfafbb025df7a94b60c956a3487}} 
+\index{ai\_optics@{ai\_optics}!reset\_values@{reset\_values}}
+\index{reset\_values@{reset\_values}!ai\_optics@{ai\_optics}}
+\doxysubsubsection{\texorpdfstring{reset\_values()}{reset\_values()}}
+{\footnotesize\ttfamily subroutine ai\+\_\+optics\+::reset\+\_\+values (\begin{DoxyParamCaption}\item[{class(\mbox{\hyperlink{structai__optics_1_1optics__t}{optics\+\_\+t}}), intent(inout)}]{this }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Resets the values of the optical property. 
+
+
+
+Definition at line 122 of file optics.\+F90.
+
+\mbox{\Hypertarget{namespaceai__optics_aa334527f926ce32a61b4272d6b50c0ec}\label{namespaceai__optics_aa334527f926ce32a61b4272d6b50c0ec}} 
+\index{ai\_optics@{ai\_optics}!set\_values@{set\_values}}
+\index{set\_values@{set\_values}!ai\_optics@{ai\_optics}}
+\doxysubsubsection{\texorpdfstring{set\_values()}{set\_values()}}
+{\footnotesize\ttfamily subroutine ai\+\_\+optics\+::set\+\_\+values (\begin{DoxyParamCaption}\item[{class(\mbox{\hyperlink{structai__optics_1_1optics__t}{optics\+\_\+t}}), intent(inout)}]{this,  }\item[{real(kind=musica\+\_\+dk), dimension(\+:), intent(in)}]{values }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Sets the values of the optical property on the native grid. 
+
+
+
+Definition at line 145 of file optics.\+F90.
+

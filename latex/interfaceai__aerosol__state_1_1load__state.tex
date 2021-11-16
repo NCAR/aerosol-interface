@@ -1,0 +1,44 @@
+\hypertarget{interfaceai__aerosol__state_1_1load__state}{}\doxysection{ai\+\_\+aerosol\+\_\+state\+::load\+\_\+state Interface Reference}
+\label{interfaceai__aerosol__state_1_1load__state}\index{ai\_aerosol\_state::load\_state@{ai\_aerosol\_state::load\_state}}
+
+
+Loads raw state data into the \mbox{\hyperlink{structai__aerosol__state_1_1aerosol__state__t}{aerosol\+\_\+state\+\_\+t}} object.  
+
+
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+subroutine \mbox{\hyperlink{interfaceai__aerosol__state_1_1load__state_a1f172cadaa246cd8ce67b2e0ea0d7a15}{load\+\_\+state}} (this, raw\+\_\+state, index)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Loads raw state data into the \mbox{\hyperlink{structai__aerosol__state_1_1aerosol__state__t}{aerosol\+\_\+state\+\_\+t}} object. 
+
+Aerosol schemes should copy the raw state into their own internal data structures. 
+
+Definition at line 41 of file aerosol\+\_\+state.\+F90.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{interfaceai__aerosol__state_1_1load__state_a1f172cadaa246cd8ce67b2e0ea0d7a15}\label{interfaceai__aerosol__state_1_1load__state_a1f172cadaa246cd8ce67b2e0ea0d7a15}} 
+\index{ai\_aerosol\_state::load\_state@{ai\_aerosol\_state::load\_state}!load\_state@{load\_state}}
+\index{load\_state@{load\_state}!ai\_aerosol\_state::load\_state@{ai\_aerosol\_state::load\_state}}
+\doxysubsubsection{\texorpdfstring{load\_state()}{load\_state()}}
+{\footnotesize\ttfamily subroutine ai\+\_\+aerosol\+\_\+state\+::load\+\_\+state\+::load\+\_\+state (\begin{DoxyParamCaption}\item[{class(\mbox{\hyperlink{structai__aerosol__state_1_1aerosol__state__t}{aerosol\+\_\+state\+\_\+t}}), intent(inout)}]{this,  }\item[{real(kind=musica\+\_\+dk), dimension(\+:), intent(in)}]{raw\+\_\+state,  }\item[{integer, intent(inout), optional}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em index} & The index argument can be used to specify the starting index in raw\+\_\+state to use for the aerosol state data and will be advanced by the size of the aerosol state. If it is not included the starting index will be assumed to be 1. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 41 of file aerosol\+\_\+state.\+F90.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/github/workspace/src/\mbox{\hyperlink{aerosol__state_8F90}{aerosol\+\_\+state.\+F90}}\end{DoxyCompactItemize}

@@ -1,0 +1,41 @@
+\hypertarget{interfaceai__aerosol_1_1new__optics}{}\doxysection{ai\+\_\+aerosol\+::new\+\_\+optics Interface Reference}
+\label{interfaceai__aerosol_1_1new__optics}\index{ai\_aerosol::new\_optics@{ai\_aerosol::new\_optics}}
+
+
+Creates an optics\+\_\+t object for a given optical property.  
+
+
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+class(\mbox{\hyperlink{structai__optics_1_1optics__t}{optics\+\_\+t}}) function, pointer \mbox{\hyperlink{interfaceai__aerosol_1_1new__optics_af6fe6b3212454e6ea5c0eb38c712b09b}{new\+\_\+optics}} (this, property, output\+\_\+grid, interpolation\+\_\+strategy)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Creates an optics\+\_\+t object for a given optical property. 
+
+The aerosol module should pack any information needed to return the requested optics on the grid specified in the optics\+\_\+t object into the returned optics\+\_\+t object\textquotesingle{}s accessor member, such that given the optics\+\_\+t object and the envrionmental conditions, the requested optics can be returned on the specified grid.
+
+If the grid or optical properties cannot be calculated, the aerosol model should fail the run. 
+
+Definition at line 64 of file aerosol.\+F90.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{interfaceai__aerosol_1_1new__optics_af6fe6b3212454e6ea5c0eb38c712b09b}\label{interfaceai__aerosol_1_1new__optics_af6fe6b3212454e6ea5c0eb38c712b09b}} 
+\index{ai\_aerosol::new\_optics@{ai\_aerosol::new\_optics}!new\_optics@{new\_optics}}
+\index{new\_optics@{new\_optics}!ai\_aerosol::new\_optics@{ai\_aerosol::new\_optics}}
+\doxysubsubsection{\texorpdfstring{new\_optics()}{new\_optics()}}
+{\footnotesize\ttfamily class(\mbox{\hyperlink{structai__optics_1_1optics__t}{optics\+\_\+t}}) function, pointer ai\+\_\+aerosol\+::new\+\_\+optics\+::new\+\_\+optics (\begin{DoxyParamCaption}\item[{class(\mbox{\hyperlink{structai__aerosol_1_1aerosol__t}{aerosol\+\_\+t}}), intent(in)}]{this,  }\item[{class(property\+\_\+t), intent(in)}]{property,  }\item[{type(\mbox{\hyperlink{structai__wavelength__grid_1_1wavelength__grid__t}{wavelength\+\_\+grid\+\_\+t}}), intent(in)}]{output\+\_\+grid,  }\item[{procedure(interpolation\+\_\+strategy\+\_\+i), optional}]{interpolation\+\_\+strategy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 64 of file aerosol.\+F90.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/github/workspace/src/\mbox{\hyperlink{aerosol_8F90}{aerosol.\+F90}}\end{DoxyCompactItemize}

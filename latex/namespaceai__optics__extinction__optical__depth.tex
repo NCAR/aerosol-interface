@@ -1,0 +1,89 @@
+\hypertarget{namespaceai__optics__extinction__optical__depth}{}\doxysection{ai\+\_\+optics\+\_\+extinction\+\_\+optical\+\_\+depth Module Reference}
+\label{namespaceai__optics__extinction__optical__depth}\index{ai\_optics\_extinction\_optical\_depth@{ai\_optics\_extinction\_optical\_depth}}
+
+
+The \mbox{\hyperlink{structai__optics__extinction__optical__depth_1_1optics__extinction__optical__depth__t}{optics\+\_\+extinction\+\_\+optical\+\_\+depth\+\_\+t}} type and related functions.  
+
+
+\doxysubsection*{Data Types}
+\begin{DoxyCompactItemize}
+\item 
+interface \mbox{\hyperlink{structai__optics__extinction__optical__depth_1_1optics__extinction__optical__depth__t}{optics\+\_\+extinction\+\_\+optical\+\_\+depth\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions/\+Subroutines}
+\begin{DoxyCompactItemize}
+\item 
+type(\mbox{\hyperlink{structai__optics__extinction__optical__depth_1_1optics__extinction__optical__depth__t}{optics\+\_\+extinction\+\_\+optical\+\_\+depth\+\_\+t}}) function, pointer \mbox{\hyperlink{namespaceai__optics__extinction__optical__depth_a8642b37dfaf7a6f47466c89cc56646cb}{constructor}} (native\+\_\+grid, output\+\_\+grid, accessor, interpolation\+\_\+strategy)
+\begin{DoxyCompactList}\small\item\em Constructor of \mbox{\hyperlink{structai__optics__extinction__optical__depth_1_1optics__extinction__optical__depth__t}{optics\+\_\+extinction\+\_\+optical\+\_\+depth\+\_\+t}} object. \end{DoxyCompactList}\item 
+subroutine \mbox{\hyperlink{namespaceai__optics__extinction__optical__depth_a51f731059f6586964a9ba697d21c5486}{finalize}} (this)
+\begin{DoxyCompactList}\small\item\em Finalize the optics object. \end{DoxyCompactList}\item 
+type(string\+\_\+t) function \mbox{\hyperlink{namespaceai__optics__extinction__optical__depth_ad2601aa1d8036f2101e374a212b0b94f}{property\+\_\+name}} (this)
+\begin{DoxyCompactList}\small\item\em Returns the name of the optical property. \end{DoxyCompactList}\item 
+type(string\+\_\+t) function \mbox{\hyperlink{namespaceai__optics__extinction__optical__depth_ac08629072aab6886e3beaf74829dde81}{units}} (this)
+\begin{DoxyCompactList}\small\item\em Returns the units of the optical property. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{structai__optics__extinction__optical__depth_1_1optics__extinction__optical__depth__t}{optics\+\_\+extinction\+\_\+optical\+\_\+depth\+\_\+t}} type and related functions. 
+
+\doxysubsection{Function/\+Subroutine Documentation}
+\mbox{\Hypertarget{namespaceai__optics__extinction__optical__depth_a8642b37dfaf7a6f47466c89cc56646cb}\label{namespaceai__optics__extinction__optical__depth_a8642b37dfaf7a6f47466c89cc56646cb}} 
+\index{ai\_optics\_extinction\_optical\_depth@{ai\_optics\_extinction\_optical\_depth}!constructor@{constructor}}
+\index{constructor@{constructor}!ai\_optics\_extinction\_optical\_depth@{ai\_optics\_extinction\_optical\_depth}}
+\doxysubsubsection{\texorpdfstring{constructor()}{constructor()}}
+{\footnotesize\ttfamily type(\mbox{\hyperlink{structai__optics__extinction__optical__depth_1_1optics__extinction__optical__depth__t}{optics\+\_\+extinction\+\_\+optical\+\_\+depth\+\_\+t}}) function, pointer ai\+\_\+optics\+\_\+extinction\+\_\+optical\+\_\+depth\+::constructor (\begin{DoxyParamCaption}\item[{type(\mbox{\hyperlink{structai__wavelength__grid_1_1wavelength__grid__t}{wavelength\+\_\+grid\+\_\+t}}), intent(in)}]{native\+\_\+grid,  }\item[{type(\mbox{\hyperlink{structai__wavelength__grid_1_1wavelength__grid__t}{wavelength\+\_\+grid\+\_\+t}}), intent(in)}]{output\+\_\+grid,  }\item[{class(\mbox{\hyperlink{structai__accessor_1_1accessor__t}{accessor\+\_\+t}}), intent(in), optional}]{accessor,  }\item[{procedure(interpolation\+\_\+strategy\+\_\+i), optional}]{interpolation\+\_\+strategy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Constructor of \mbox{\hyperlink{structai__optics__extinction__optical__depth_1_1optics__extinction__optical__depth__t}{optics\+\_\+extinction\+\_\+optical\+\_\+depth\+\_\+t}} object. 
+
+
+
+Definition at line 35 of file extinction\+\_\+optical\+\_\+depth.\+F90.
+
+\mbox{\Hypertarget{namespaceai__optics__extinction__optical__depth_a51f731059f6586964a9ba697d21c5486}\label{namespaceai__optics__extinction__optical__depth_a51f731059f6586964a9ba697d21c5486}} 
+\index{ai\_optics\_extinction\_optical\_depth@{ai\_optics\_extinction\_optical\_depth}!finalize@{finalize}}
+\index{finalize@{finalize}!ai\_optics\_extinction\_optical\_depth@{ai\_optics\_extinction\_optical\_depth}}
+\doxysubsubsection{\texorpdfstring{finalize()}{finalize()}}
+{\footnotesize\ttfamily subroutine ai\+\_\+optics\+\_\+extinction\+\_\+optical\+\_\+depth\+::finalize (\begin{DoxyParamCaption}\item[{type(\mbox{\hyperlink{structai__optics__extinction__optical__depth_1_1optics__extinction__optical__depth__t}{optics\+\_\+extinction\+\_\+optical\+\_\+depth\+\_\+t}}), intent(inout)}]{this }\end{DoxyParamCaption})}
+
+
+
+Finalize the optics object. 
+
+
+
+Definition at line 83 of file extinction\+\_\+optical\+\_\+depth.\+F90.
+
+
+
+Referenced by ai\+\_\+optics\+\_\+extinction\+\_\+optical\+\_\+depth\+::optics\+\_\+extinction\+\_\+optical\+\_\+depth\+\_\+t\+::finalize().
+
+\mbox{\Hypertarget{namespaceai__optics__extinction__optical__depth_ad2601aa1d8036f2101e374a212b0b94f}\label{namespaceai__optics__extinction__optical__depth_ad2601aa1d8036f2101e374a212b0b94f}} 
+\index{ai\_optics\_extinction\_optical\_depth@{ai\_optics\_extinction\_optical\_depth}!property\_name@{property\_name}}
+\index{property\_name@{property\_name}!ai\_optics\_extinction\_optical\_depth@{ai\_optics\_extinction\_optical\_depth}}
+\doxysubsubsection{\texorpdfstring{property\_name()}{property\_name()}}
+{\footnotesize\ttfamily type(string\+\_\+t) function ai\+\_\+optics\+\_\+extinction\+\_\+optical\+\_\+depth\+::property\+\_\+name (\begin{DoxyParamCaption}\item[{class(\mbox{\hyperlink{structai__optics__extinction__optical__depth_1_1optics__extinction__optical__depth__t}{optics\+\_\+extinction\+\_\+optical\+\_\+depth\+\_\+t}}), intent(in)}]{this }\end{DoxyParamCaption})}
+
+
+
+Returns the name of the optical property. 
+
+
+
+Definition at line 57 of file extinction\+\_\+optical\+\_\+depth.\+F90.
+
+\mbox{\Hypertarget{namespaceai__optics__extinction__optical__depth_ac08629072aab6886e3beaf74829dde81}\label{namespaceai__optics__extinction__optical__depth_ac08629072aab6886e3beaf74829dde81}} 
+\index{ai\_optics\_extinction\_optical\_depth@{ai\_optics\_extinction\_optical\_depth}!units@{units}}
+\index{units@{units}!ai\_optics\_extinction\_optical\_depth@{ai\_optics\_extinction\_optical\_depth}}
+\doxysubsubsection{\texorpdfstring{units()}{units()}}
+{\footnotesize\ttfamily type(string\+\_\+t) function ai\+\_\+optics\+\_\+extinction\+\_\+optical\+\_\+depth\+::units (\begin{DoxyParamCaption}\item[{class(\mbox{\hyperlink{structai__optics__extinction__optical__depth_1_1optics__extinction__optical__depth__t}{optics\+\_\+extinction\+\_\+optical\+\_\+depth\+\_\+t}}), intent(in)}]{this }\end{DoxyParamCaption})}
+
+
+
+Returns the units of the optical property. 
+
+
+
+Definition at line 70 of file extinction\+\_\+optical\+\_\+depth.\+F90.
+

@@ -1,0 +1,89 @@
+\hypertarget{namespaceai__optics__single__scatter__albedo}{}\doxysection{ai\+\_\+optics\+\_\+single\+\_\+scatter\+\_\+albedo Module Reference}
+\label{namespaceai__optics__single__scatter__albedo}\index{ai\_optics\_single\_scatter\_albedo@{ai\_optics\_single\_scatter\_albedo}}
+
+
+The \mbox{\hyperlink{structai__optics__single__scatter__albedo_1_1optics__single__scatter__albedo__t}{optics\+\_\+single\+\_\+scatter\+\_\+albedo\+\_\+t}} type and related functions.  
+
+
+\doxysubsection*{Data Types}
+\begin{DoxyCompactItemize}
+\item 
+interface \mbox{\hyperlink{structai__optics__single__scatter__albedo_1_1optics__single__scatter__albedo__t}{optics\+\_\+single\+\_\+scatter\+\_\+albedo\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions/\+Subroutines}
+\begin{DoxyCompactItemize}
+\item 
+type(\mbox{\hyperlink{structai__optics__single__scatter__albedo_1_1optics__single__scatter__albedo__t}{optics\+\_\+single\+\_\+scatter\+\_\+albedo\+\_\+t}}) function, pointer \mbox{\hyperlink{namespaceai__optics__single__scatter__albedo_a46e16072f7a6c7f3785cfe73e5ba5241}{constructor}} (native\+\_\+grid, output\+\_\+grid, accessor, interpolation\+\_\+strategy)
+\begin{DoxyCompactList}\small\item\em Constructor of \mbox{\hyperlink{structai__optics__single__scatter__albedo_1_1optics__single__scatter__albedo__t}{optics\+\_\+single\+\_\+scatter\+\_\+albedo\+\_\+t}} object. \end{DoxyCompactList}\item 
+subroutine \mbox{\hyperlink{namespaceai__optics__single__scatter__albedo_a5cff0d3c0c75cb4d0e40a1c365de9a87}{finalize}} (this)
+\begin{DoxyCompactList}\small\item\em Finalize the optics object. \end{DoxyCompactList}\item 
+type(string\+\_\+t) function \mbox{\hyperlink{namespaceai__optics__single__scatter__albedo_a806db6810bb3700bea2127c9d4a7278d}{property\+\_\+name}} (this)
+\begin{DoxyCompactList}\small\item\em Returns the name of the optical property. \end{DoxyCompactList}\item 
+type(string\+\_\+t) function \mbox{\hyperlink{namespaceai__optics__single__scatter__albedo_a3b116c9ab8dbbefcddc2d4bacde83816}{units}} (this)
+\begin{DoxyCompactList}\small\item\em Returns the units of the optical property. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{structai__optics__single__scatter__albedo_1_1optics__single__scatter__albedo__t}{optics\+\_\+single\+\_\+scatter\+\_\+albedo\+\_\+t}} type and related functions. 
+
+\doxysubsection{Function/\+Subroutine Documentation}
+\mbox{\Hypertarget{namespaceai__optics__single__scatter__albedo_a46e16072f7a6c7f3785cfe73e5ba5241}\label{namespaceai__optics__single__scatter__albedo_a46e16072f7a6c7f3785cfe73e5ba5241}} 
+\index{ai\_optics\_single\_scatter\_albedo@{ai\_optics\_single\_scatter\_albedo}!constructor@{constructor}}
+\index{constructor@{constructor}!ai\_optics\_single\_scatter\_albedo@{ai\_optics\_single\_scatter\_albedo}}
+\doxysubsubsection{\texorpdfstring{constructor()}{constructor()}}
+{\footnotesize\ttfamily type(\mbox{\hyperlink{structai__optics__single__scatter__albedo_1_1optics__single__scatter__albedo__t}{optics\+\_\+single\+\_\+scatter\+\_\+albedo\+\_\+t}}) function, pointer ai\+\_\+optics\+\_\+single\+\_\+scatter\+\_\+albedo\+::constructor (\begin{DoxyParamCaption}\item[{type(\mbox{\hyperlink{structai__wavelength__grid_1_1wavelength__grid__t}{wavelength\+\_\+grid\+\_\+t}}), intent(in)}]{native\+\_\+grid,  }\item[{type(\mbox{\hyperlink{structai__wavelength__grid_1_1wavelength__grid__t}{wavelength\+\_\+grid\+\_\+t}}), intent(in)}]{output\+\_\+grid,  }\item[{class(\mbox{\hyperlink{structai__accessor_1_1accessor__t}{accessor\+\_\+t}}), intent(in), optional}]{accessor,  }\item[{procedure(interpolation\+\_\+strategy\+\_\+i), optional}]{interpolation\+\_\+strategy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Constructor of \mbox{\hyperlink{structai__optics__single__scatter__albedo_1_1optics__single__scatter__albedo__t}{optics\+\_\+single\+\_\+scatter\+\_\+albedo\+\_\+t}} object. 
+
+
+
+Definition at line 35 of file single\+\_\+scatter\+\_\+albedo.\+F90.
+
+\mbox{\Hypertarget{namespaceai__optics__single__scatter__albedo_a5cff0d3c0c75cb4d0e40a1c365de9a87}\label{namespaceai__optics__single__scatter__albedo_a5cff0d3c0c75cb4d0e40a1c365de9a87}} 
+\index{ai\_optics\_single\_scatter\_albedo@{ai\_optics\_single\_scatter\_albedo}!finalize@{finalize}}
+\index{finalize@{finalize}!ai\_optics\_single\_scatter\_albedo@{ai\_optics\_single\_scatter\_albedo}}
+\doxysubsubsection{\texorpdfstring{finalize()}{finalize()}}
+{\footnotesize\ttfamily subroutine ai\+\_\+optics\+\_\+single\+\_\+scatter\+\_\+albedo\+::finalize (\begin{DoxyParamCaption}\item[{type(\mbox{\hyperlink{structai__optics__single__scatter__albedo_1_1optics__single__scatter__albedo__t}{optics\+\_\+single\+\_\+scatter\+\_\+albedo\+\_\+t}}), intent(inout)}]{this }\end{DoxyParamCaption})}
+
+
+
+Finalize the optics object. 
+
+
+
+Definition at line 83 of file single\+\_\+scatter\+\_\+albedo.\+F90.
+
+
+
+Referenced by ai\+\_\+optics\+\_\+single\+\_\+scatter\+\_\+albedo\+::optics\+\_\+single\+\_\+scatter\+\_\+albedo\+\_\+t\+::finalize().
+
+\mbox{\Hypertarget{namespaceai__optics__single__scatter__albedo_a806db6810bb3700bea2127c9d4a7278d}\label{namespaceai__optics__single__scatter__albedo_a806db6810bb3700bea2127c9d4a7278d}} 
+\index{ai\_optics\_single\_scatter\_albedo@{ai\_optics\_single\_scatter\_albedo}!property\_name@{property\_name}}
+\index{property\_name@{property\_name}!ai\_optics\_single\_scatter\_albedo@{ai\_optics\_single\_scatter\_albedo}}
+\doxysubsubsection{\texorpdfstring{property\_name()}{property\_name()}}
+{\footnotesize\ttfamily type(string\+\_\+t) function ai\+\_\+optics\+\_\+single\+\_\+scatter\+\_\+albedo\+::property\+\_\+name (\begin{DoxyParamCaption}\item[{class(\mbox{\hyperlink{structai__optics__single__scatter__albedo_1_1optics__single__scatter__albedo__t}{optics\+\_\+single\+\_\+scatter\+\_\+albedo\+\_\+t}}), intent(in)}]{this }\end{DoxyParamCaption})}
+
+
+
+Returns the name of the optical property. 
+
+
+
+Definition at line 57 of file single\+\_\+scatter\+\_\+albedo.\+F90.
+
+\mbox{\Hypertarget{namespaceai__optics__single__scatter__albedo_a3b116c9ab8dbbefcddc2d4bacde83816}\label{namespaceai__optics__single__scatter__albedo_a3b116c9ab8dbbefcddc2d4bacde83816}} 
+\index{ai\_optics\_single\_scatter\_albedo@{ai\_optics\_single\_scatter\_albedo}!units@{units}}
+\index{units@{units}!ai\_optics\_single\_scatter\_albedo@{ai\_optics\_single\_scatter\_albedo}}
+\doxysubsubsection{\texorpdfstring{units()}{units()}}
+{\footnotesize\ttfamily type(string\+\_\+t) function ai\+\_\+optics\+\_\+single\+\_\+scatter\+\_\+albedo\+::units (\begin{DoxyParamCaption}\item[{class(\mbox{\hyperlink{structai__optics__single__scatter__albedo_1_1optics__single__scatter__albedo__t}{optics\+\_\+single\+\_\+scatter\+\_\+albedo\+\_\+t}}), intent(in)}]{this }\end{DoxyParamCaption})}
+
+
+
+Returns the units of the optical property. 
+
+
+
+Definition at line 70 of file single\+\_\+scatter\+\_\+albedo.\+F90.
+

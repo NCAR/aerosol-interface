@@ -1,0 +1,89 @@
+\hypertarget{namespaceai__optics__forward__scattered__fraction}{}\doxysection{ai\+\_\+optics\+\_\+forward\+\_\+scattered\+\_\+fraction Module Reference}
+\label{namespaceai__optics__forward__scattered__fraction}\index{ai\_optics\_forward\_scattered\_fraction@{ai\_optics\_forward\_scattered\_fraction}}
+
+
+The \mbox{\hyperlink{structai__optics__forward__scattered__fraction_1_1optics__forward__scattered__fraction__t}{optics\+\_\+forward\+\_\+scattered\+\_\+fraction\+\_\+t}} type and related functions.  
+
+
+\doxysubsection*{Data Types}
+\begin{DoxyCompactItemize}
+\item 
+interface \mbox{\hyperlink{structai__optics__forward__scattered__fraction_1_1optics__forward__scattered__fraction__t}{optics\+\_\+forward\+\_\+scattered\+\_\+fraction\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions/\+Subroutines}
+\begin{DoxyCompactItemize}
+\item 
+type(\mbox{\hyperlink{structai__optics__forward__scattered__fraction_1_1optics__forward__scattered__fraction__t}{optics\+\_\+forward\+\_\+scattered\+\_\+fraction\+\_\+t}}) function, pointer \mbox{\hyperlink{namespaceai__optics__forward__scattered__fraction_a6b60499b7a6074b8b4cb4d113103c300}{constructor}} (native\+\_\+grid, output\+\_\+grid, accessor, interpolation\+\_\+strategy)
+\begin{DoxyCompactList}\small\item\em Constructor of \mbox{\hyperlink{structai__optics__forward__scattered__fraction_1_1optics__forward__scattered__fraction__t}{optics\+\_\+forward\+\_\+scattered\+\_\+fraction\+\_\+t}} object. \end{DoxyCompactList}\item 
+subroutine \mbox{\hyperlink{namespaceai__optics__forward__scattered__fraction_a03793cf0f0b3c744f808472b0a139fd9}{finalize}} (this)
+\begin{DoxyCompactList}\small\item\em Finalize the optics object. \end{DoxyCompactList}\item 
+type(string\+\_\+t) function \mbox{\hyperlink{namespaceai__optics__forward__scattered__fraction_ac2f8e8ebfc21ced9b7501664fb0945b0}{property\+\_\+name}} (this)
+\begin{DoxyCompactList}\small\item\em Returns the name of the optical property. \end{DoxyCompactList}\item 
+type(string\+\_\+t) function \mbox{\hyperlink{namespaceai__optics__forward__scattered__fraction_aff5b45e11c7fb908e6dd7bee18808f79}{units}} (this)
+\begin{DoxyCompactList}\small\item\em Returns the units of the optical property. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{structai__optics__forward__scattered__fraction_1_1optics__forward__scattered__fraction__t}{optics\+\_\+forward\+\_\+scattered\+\_\+fraction\+\_\+t}} type and related functions. 
+
+\doxysubsection{Function/\+Subroutine Documentation}
+\mbox{\Hypertarget{namespaceai__optics__forward__scattered__fraction_a6b60499b7a6074b8b4cb4d113103c300}\label{namespaceai__optics__forward__scattered__fraction_a6b60499b7a6074b8b4cb4d113103c300}} 
+\index{ai\_optics\_forward\_scattered\_fraction@{ai\_optics\_forward\_scattered\_fraction}!constructor@{constructor}}
+\index{constructor@{constructor}!ai\_optics\_forward\_scattered\_fraction@{ai\_optics\_forward\_scattered\_fraction}}
+\doxysubsubsection{\texorpdfstring{constructor()}{constructor()}}
+{\footnotesize\ttfamily type(\mbox{\hyperlink{structai__optics__forward__scattered__fraction_1_1optics__forward__scattered__fraction__t}{optics\+\_\+forward\+\_\+scattered\+\_\+fraction\+\_\+t}}) function, pointer ai\+\_\+optics\+\_\+forward\+\_\+scattered\+\_\+fraction\+::constructor (\begin{DoxyParamCaption}\item[{type(\mbox{\hyperlink{structai__wavelength__grid_1_1wavelength__grid__t}{wavelength\+\_\+grid\+\_\+t}}), intent(in)}]{native\+\_\+grid,  }\item[{type(\mbox{\hyperlink{structai__wavelength__grid_1_1wavelength__grid__t}{wavelength\+\_\+grid\+\_\+t}}), intent(in)}]{output\+\_\+grid,  }\item[{class(\mbox{\hyperlink{structai__accessor_1_1accessor__t}{accessor\+\_\+t}}), intent(in), optional}]{accessor,  }\item[{procedure(interpolation\+\_\+strategy\+\_\+i), optional}]{interpolation\+\_\+strategy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Constructor of \mbox{\hyperlink{structai__optics__forward__scattered__fraction_1_1optics__forward__scattered__fraction__t}{optics\+\_\+forward\+\_\+scattered\+\_\+fraction\+\_\+t}} object. 
+
+
+
+Definition at line 35 of file forward\+\_\+scattered\+\_\+fraction.\+F90.
+
+\mbox{\Hypertarget{namespaceai__optics__forward__scattered__fraction_a03793cf0f0b3c744f808472b0a139fd9}\label{namespaceai__optics__forward__scattered__fraction_a03793cf0f0b3c744f808472b0a139fd9}} 
+\index{ai\_optics\_forward\_scattered\_fraction@{ai\_optics\_forward\_scattered\_fraction}!finalize@{finalize}}
+\index{finalize@{finalize}!ai\_optics\_forward\_scattered\_fraction@{ai\_optics\_forward\_scattered\_fraction}}
+\doxysubsubsection{\texorpdfstring{finalize()}{finalize()}}
+{\footnotesize\ttfamily subroutine ai\+\_\+optics\+\_\+forward\+\_\+scattered\+\_\+fraction\+::finalize (\begin{DoxyParamCaption}\item[{type(\mbox{\hyperlink{structai__optics__forward__scattered__fraction_1_1optics__forward__scattered__fraction__t}{optics\+\_\+forward\+\_\+scattered\+\_\+fraction\+\_\+t}}), intent(inout)}]{this }\end{DoxyParamCaption})}
+
+
+
+Finalize the optics object. 
+
+
+
+Definition at line 83 of file forward\+\_\+scattered\+\_\+fraction.\+F90.
+
+
+
+Referenced by ai\+\_\+optics\+\_\+forward\+\_\+scattered\+\_\+fraction\+::optics\+\_\+forward\+\_\+scattered\+\_\+fraction\+\_\+t\+::finalize().
+
+\mbox{\Hypertarget{namespaceai__optics__forward__scattered__fraction_ac2f8e8ebfc21ced9b7501664fb0945b0}\label{namespaceai__optics__forward__scattered__fraction_ac2f8e8ebfc21ced9b7501664fb0945b0}} 
+\index{ai\_optics\_forward\_scattered\_fraction@{ai\_optics\_forward\_scattered\_fraction}!property\_name@{property\_name}}
+\index{property\_name@{property\_name}!ai\_optics\_forward\_scattered\_fraction@{ai\_optics\_forward\_scattered\_fraction}}
+\doxysubsubsection{\texorpdfstring{property\_name()}{property\_name()}}
+{\footnotesize\ttfamily type(string\+\_\+t) function ai\+\_\+optics\+\_\+forward\+\_\+scattered\+\_\+fraction\+::property\+\_\+name (\begin{DoxyParamCaption}\item[{class(\mbox{\hyperlink{structai__optics__forward__scattered__fraction_1_1optics__forward__scattered__fraction__t}{optics\+\_\+forward\+\_\+scattered\+\_\+fraction\+\_\+t}}), intent(in)}]{this }\end{DoxyParamCaption})}
+
+
+
+Returns the name of the optical property. 
+
+
+
+Definition at line 57 of file forward\+\_\+scattered\+\_\+fraction.\+F90.
+
+\mbox{\Hypertarget{namespaceai__optics__forward__scattered__fraction_aff5b45e11c7fb908e6dd7bee18808f79}\label{namespaceai__optics__forward__scattered__fraction_aff5b45e11c7fb908e6dd7bee18808f79}} 
+\index{ai\_optics\_forward\_scattered\_fraction@{ai\_optics\_forward\_scattered\_fraction}!units@{units}}
+\index{units@{units}!ai\_optics\_forward\_scattered\_fraction@{ai\_optics\_forward\_scattered\_fraction}}
+\doxysubsubsection{\texorpdfstring{units()}{units()}}
+{\footnotesize\ttfamily type(string\+\_\+t) function ai\+\_\+optics\+\_\+forward\+\_\+scattered\+\_\+fraction\+::units (\begin{DoxyParamCaption}\item[{class(\mbox{\hyperlink{structai__optics__forward__scattered__fraction_1_1optics__forward__scattered__fraction__t}{optics\+\_\+forward\+\_\+scattered\+\_\+fraction\+\_\+t}}), intent(in)}]{this }\end{DoxyParamCaption})}
+
+
+
+Returns the units of the optical property. 
+
+
+
+Definition at line 70 of file forward\+\_\+scattered\+\_\+fraction.\+F90.
+

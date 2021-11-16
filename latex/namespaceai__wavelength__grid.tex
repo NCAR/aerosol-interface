@@ -1,0 +1,136 @@
+\hypertarget{namespaceai__wavelength__grid}{}\doxysection{ai\+\_\+wavelength\+\_\+grid Module Reference}
+\label{namespaceai__wavelength__grid}\index{ai\_wavelength\_grid@{ai\_wavelength\_grid}}
+
+
+The \mbox{\hyperlink{structai__wavelength__grid_1_1wavelength__grid__t}{wavelength\+\_\+grid\+\_\+t}} type and related functions.  
+
+
+\doxysubsection*{Data Types}
+\begin{DoxyCompactItemize}
+\item 
+interface \mbox{\hyperlink{structai__wavelength__grid_1_1wavelength__grid__t}{wavelength\+\_\+grid\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em A wavelength grid. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions/\+Subroutines}
+\begin{DoxyCompactItemize}
+\item 
+type(\mbox{\hyperlink{structai__wavelength__grid_1_1wavelength__grid__t}{wavelength\+\_\+grid\+\_\+t}}) function \mbox{\hyperlink{namespaceai__wavelength__grid_a15ccc6a8a479b7e9505d0e7c35dcc18d}{constructor\+\_\+bounds}} (lower\+\_\+bounds, upper\+\_\+bounds, bounds\+\_\+in, base\+\_\+unit)
+\begin{DoxyCompactList}\small\item\em Constructor of \mbox{\hyperlink{structai__wavelength__grid_1_1wavelength__grid__t}{wavelength\+\_\+grid\+\_\+t}} objects from lower and upper bin bounds. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{Indent}\textbf{ Constants for building wavelength grids}\par
+\begin{DoxyCompactItemize}
+\item 
+integer, parameter, public \mbox{\hyperlink{namespaceai__wavelength__grid_adda2576cc28b9346937249bd11ca7ce8}{kwavelength}} = 1
+\item 
+integer, parameter, public \mbox{\hyperlink{namespaceai__wavelength__grid_a2dc9a3e9c59a00814d477feec0dc1841}{kwavenumber}} = 2
+\item 
+integer, parameter, public \mbox{\hyperlink{namespaceai__wavelength__grid_ac72dbfe75a0d8cdd86752567424e1af8}{kcentimeter}} = 10
+\item 
+integer, parameter, public \mbox{\hyperlink{namespaceai__wavelength__grid_a056702dc075a5cea91955e89b4f53fdd}{kmeter}} = 11
+\item 
+integer, parameter, public \mbox{\hyperlink{namespaceai__wavelength__grid_a5e031648e0dc5c17d4be4674c468702d}{knanometer}} = 12
+\end{DoxyCompactItemize}
+\end{Indent}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{structai__wavelength__grid_1_1wavelength__grid__t}{wavelength\+\_\+grid\+\_\+t}} type and related functions. 
+
+\doxysubsection{Function/\+Subroutine Documentation}
+\mbox{\Hypertarget{namespaceai__wavelength__grid_a15ccc6a8a479b7e9505d0e7c35dcc18d}\label{namespaceai__wavelength__grid_a15ccc6a8a479b7e9505d0e7c35dcc18d}} 
+\index{ai\_wavelength\_grid@{ai\_wavelength\_grid}!constructor\_bounds@{constructor\_bounds}}
+\index{constructor\_bounds@{constructor\_bounds}!ai\_wavelength\_grid@{ai\_wavelength\_grid}}
+\doxysubsubsection{\texorpdfstring{constructor\_bounds()}{constructor\_bounds()}}
+{\footnotesize\ttfamily type(\mbox{\hyperlink{structai__wavelength__grid_1_1wavelength__grid__t}{wavelength\+\_\+grid\+\_\+t}}) function ai\+\_\+wavelength\+\_\+grid\+::constructor\+\_\+bounds (\begin{DoxyParamCaption}\item[{real(kind=musica\+\_\+dk), dimension(\+:), intent(in)}]{lower\+\_\+bounds,  }\item[{real(kind=musica\+\_\+dk), dimension(\+:), intent(in)}]{upper\+\_\+bounds,  }\item[{integer, intent(in), optional}]{bounds\+\_\+in,  }\item[{integer, intent(in), optional}]{base\+\_\+unit }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Constructor of \mbox{\hyperlink{structai__wavelength__grid_1_1wavelength__grid__t}{wavelength\+\_\+grid\+\_\+t}} objects from lower and upper bin bounds. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em lower\+\_\+bounds} & Lower wavelength bounds for each bin \\
+\hline
+\mbox{\texttt{ in}}  & {\em upper\+\_\+bounds} & Upper wavelength bounds for each bin \\
+\hline
+\mbox{\texttt{ in}}  & {\em bounds\+\_\+in} & How bounds are specified (k\+Wavelength or k\+Wavenumber) defaults to wavelength \\
+\hline
+\mbox{\texttt{ in}}  & {\em base\+\_\+unit} & Base length units (k\+Centimeter, k\+Meter, k\+Nanometer) defaults to \mbox{[}m\mbox{]} \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 40 of file wavelength\+\_\+grid.\+F90.
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespaceai__wavelength__grid_ac72dbfe75a0d8cdd86752567424e1af8}\label{namespaceai__wavelength__grid_ac72dbfe75a0d8cdd86752567424e1af8}} 
+\index{ai\_wavelength\_grid@{ai\_wavelength\_grid}!kcentimeter@{kcentimeter}}
+\index{kcentimeter@{kcentimeter}!ai\_wavelength\_grid@{ai\_wavelength\_grid}}
+\doxysubsubsection{\texorpdfstring{kcentimeter}{kcentimeter}}
+{\footnotesize\ttfamily integer, parameter, public ai\+\_\+wavelength\+\_\+grid\+::kcentimeter = 10}
+
+
+
+Definition at line 21 of file wavelength\+\_\+grid.\+F90.
+
+
+
+Referenced by ai\+\_\+wavelength\+\_\+grid\+::wavelength\+\_\+grid\+\_\+t\+::constructor\+\_\+bounds().
+
+\mbox{\Hypertarget{namespaceai__wavelength__grid_a056702dc075a5cea91955e89b4f53fdd}\label{namespaceai__wavelength__grid_a056702dc075a5cea91955e89b4f53fdd}} 
+\index{ai\_wavelength\_grid@{ai\_wavelength\_grid}!kmeter@{kmeter}}
+\index{kmeter@{kmeter}!ai\_wavelength\_grid@{ai\_wavelength\_grid}}
+\doxysubsubsection{\texorpdfstring{kmeter}{kmeter}}
+{\footnotesize\ttfamily integer, parameter, public ai\+\_\+wavelength\+\_\+grid\+::kmeter = 11}
+
+
+
+Definition at line 22 of file wavelength\+\_\+grid.\+F90.
+
+
+
+Referenced by ai\+\_\+wavelength\+\_\+grid\+::wavelength\+\_\+grid\+\_\+t\+::constructor\+\_\+bounds().
+
+\mbox{\Hypertarget{namespaceai__wavelength__grid_a5e031648e0dc5c17d4be4674c468702d}\label{namespaceai__wavelength__grid_a5e031648e0dc5c17d4be4674c468702d}} 
+\index{ai\_wavelength\_grid@{ai\_wavelength\_grid}!knanometer@{knanometer}}
+\index{knanometer@{knanometer}!ai\_wavelength\_grid@{ai\_wavelength\_grid}}
+\doxysubsubsection{\texorpdfstring{knanometer}{knanometer}}
+{\footnotesize\ttfamily integer, parameter, public ai\+\_\+wavelength\+\_\+grid\+::knanometer = 12}
+
+
+
+Definition at line 23 of file wavelength\+\_\+grid.\+F90.
+
+
+
+Referenced by ai\+\_\+wavelength\+\_\+grid\+::wavelength\+\_\+grid\+\_\+t\+::constructor\+\_\+bounds().
+
+\mbox{\Hypertarget{namespaceai__wavelength__grid_adda2576cc28b9346937249bd11ca7ce8}\label{namespaceai__wavelength__grid_adda2576cc28b9346937249bd11ca7ce8}} 
+\index{ai\_wavelength\_grid@{ai\_wavelength\_grid}!kwavelength@{kwavelength}}
+\index{kwavelength@{kwavelength}!ai\_wavelength\_grid@{ai\_wavelength\_grid}}
+\doxysubsubsection{\texorpdfstring{kwavelength}{kwavelength}}
+{\footnotesize\ttfamily integer, parameter, public ai\+\_\+wavelength\+\_\+grid\+::kwavelength = 1}
+
+
+
+Definition at line 19 of file wavelength\+\_\+grid.\+F90.
+
+
+
+Referenced by ai\+\_\+wavelength\+\_\+grid\+::wavelength\+\_\+grid\+\_\+t\+::constructor\+\_\+bounds().
+
+\mbox{\Hypertarget{namespaceai__wavelength__grid_a2dc9a3e9c59a00814d477feec0dc1841}\label{namespaceai__wavelength__grid_a2dc9a3e9c59a00814d477feec0dc1841}} 
+\index{ai\_wavelength\_grid@{ai\_wavelength\_grid}!kwavenumber@{kwavenumber}}
+\index{kwavenumber@{kwavenumber}!ai\_wavelength\_grid@{ai\_wavelength\_grid}}
+\doxysubsubsection{\texorpdfstring{kwavenumber}{kwavenumber}}
+{\footnotesize\ttfamily integer, parameter, public ai\+\_\+wavelength\+\_\+grid\+::kwavenumber = 2}
+
+
+
+Definition at line 20 of file wavelength\+\_\+grid.\+F90.
+
+
+
+Referenced by ai\+\_\+wavelength\+\_\+grid\+::wavelength\+\_\+grid\+\_\+t\+::constructor\+\_\+bounds().
+

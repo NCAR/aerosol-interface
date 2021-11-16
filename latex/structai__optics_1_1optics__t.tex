@@ -1,0 +1,273 @@
+\hypertarget{structai__optics_1_1optics__t}{}\doxysection{ai\+\_\+optics\+::optics\+\_\+t Type Reference}
+\label{structai__optics_1_1optics__t}\index{ai\_optics::optics\_t@{ai\_optics::optics\_t}}
+
+
+An optical property.  
+
+
+Inheritance diagram for ai\+\_\+optics\+::optics\+\_\+t\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=0.510251cm]{structai__optics_1_1optics__t}
+\end{center}
+\end{figure}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+procedure \mbox{\hyperlink{structai__optics_1_1optics__t_a15acde3143f452121c80cc7a56fb91ba}{accessor}} =$>$ \mbox{\hyperlink{namespaceai__optics_a35760393ef3330ae1f6a7c11e919a310}{get\+\_\+accessor}}
+\item 
+procedure \mbox{\hyperlink{structai__optics_1_1optics__t_a3e7bf08526d6a6e284f015538a85c400}{add\+\_\+values}}
+\item 
+procedure \mbox{\hyperlink{structai__optics_1_1optics__t_a90f48a2747dd8c509dade9e30831cc07}{get\+\_\+values}}
+\item 
+procedure(\mbox{\hyperlink{interfaceai__optics_1_1property__name}{property\+\_\+name}}), deferred \mbox{\hyperlink{structai__optics_1_1optics__t_a2c243a498050b774a296f5f287761cd1}{name}}
+\item 
+procedure \mbox{\hyperlink{structai__optics_1_1optics__t_a46516f5a24044869b5690efb34811622}{native\+\_\+grid}}
+\item 
+procedure \mbox{\hyperlink{structai__optics_1_1optics__t_a4d4d934305b8bc3e53dc9d4ffef08246}{output\+\_\+grid}}
+\item 
+procedure \mbox{\hyperlink{structai__optics_1_1optics__t_a7c568a2cdbba343c9614b35aa0a286c4}{private\+\_\+constructor}}
+\begin{DoxyCompactList}\small\item\em Private constructor -\/ should only be called by extending types. \end{DoxyCompactList}\item 
+procedure \mbox{\hyperlink{structai__optics_1_1optics__t_a489c619ce39394fe9d01a57442337d55}{private\+\_\+finalize}}
+\begin{DoxyCompactList}\small\item\em Private finalization -\/ should only be called by extending types. \end{DoxyCompactList}\item 
+procedure \mbox{\hyperlink{structai__optics_1_1optics__t_a27381307c5419ef900475e2d57f25974}{reset\+\_\+values}}
+\item 
+procedure \mbox{\hyperlink{structai__optics_1_1optics__t_a60a32d3e4e7315e8c218ebe3566e756d}{set\+\_\+values}}
+\item 
+procedure(\mbox{\hyperlink{interfaceai__optics_1_1units}{units}}), deferred \mbox{\hyperlink{structai__optics_1_1optics__t_a2813e9a69d6ca918ddae1c9c38b116d9}{units}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+class(\mbox{\hyperlink{structai__accessor_1_1accessor__t}{accessor\+\_\+t}}), pointer \mbox{\hyperlink{structai__optics_1_1optics__t_ab53577d21b47ea9e9c0c1d0295adb96b}{accessor\+\_\+}} =$>$ null( )
+\begin{DoxyCompactList}\small\item\em Aerosol-\/model-\/specific information for calculating the optical property. \end{DoxyCompactList}\item 
+logical \mbox{\hyperlink{structai__optics_1_1optics__t_a01919f83b83148e3bc56e7fd979b0b91}{do\+\_\+interpolation\+\_\+}} = .false.
+\begin{DoxyCompactList}\small\item\em Flag indicating whether interpolation between grids is needed. \end{DoxyCompactList}\item 
+type(interpolator\+\_\+t) \mbox{\hyperlink{structai__optics_1_1optics__t_a3a4bbdaa742ba533234d49280c43a9a1}{interpolator\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Interpolator from native grid to output grid. \end{DoxyCompactList}\item 
+type(\mbox{\hyperlink{structai__wavelength__grid_1_1wavelength__grid__t}{wavelength\+\_\+grid\+\_\+t}}) \mbox{\hyperlink{structai__optics_1_1optics__t_a0b277289adaa9209dad644b30f022a8a}{native\+\_\+grid\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Wavelength grid on which the optical property is calculated. \end{DoxyCompactList}\item 
+type(\mbox{\hyperlink{structai__wavelength__grid_1_1wavelength__grid__t}{wavelength\+\_\+grid\+\_\+t}}) \mbox{\hyperlink{structai__optics_1_1optics__t_a78f60368b37a13f3bd28d68a0995aaf5}{output\+\_\+grid\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Wavelength grid used by the owner of the {\ttfamily \mbox{\hyperlink{structai__optics_1_1optics__t}{optics\+\_\+t}}} object. \end{DoxyCompactList}\item 
+real(kind=musica\+\_\+dk), dimension(\+:), allocatable \mbox{\hyperlink{structai__optics_1_1optics__t_ac1e1e35bdd19c61b2d238aa02826a162}{values\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Optical property values on the native grid (wavelength bin) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An optical property. 
+
+Definition at line 21 of file optics.\+F90.
+
+
+
+\doxysubsection{Member Function/\+Subroutine Documentation}
+\mbox{\Hypertarget{structai__optics_1_1optics__t_a15acde3143f452121c80cc7a56fb91ba}\label{structai__optics_1_1optics__t_a15acde3143f452121c80cc7a56fb91ba}} 
+\index{ai\_optics::optics\_t@{ai\_optics::optics\_t}!accessor@{accessor}}
+\index{accessor@{accessor}!ai\_optics::optics\_t@{ai\_optics::optics\_t}}
+\doxysubsubsection{\texorpdfstring{accessor()}{accessor()}}
+{\footnotesize\ttfamily procedure ai\+\_\+optics\+::optics\+\_\+t\+::accessor\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 41 of file optics.\+F90.
+
+\mbox{\Hypertarget{structai__optics_1_1optics__t_a3e7bf08526d6a6e284f015538a85c400}\label{structai__optics_1_1optics__t_a3e7bf08526d6a6e284f015538a85c400}} 
+\index{ai\_optics::optics\_t@{ai\_optics::optics\_t}!add\_values@{add\_values}}
+\index{add\_values@{add\_values}!ai\_optics::optics\_t@{ai\_optics::optics\_t}}
+\doxysubsubsection{\texorpdfstring{add\_values()}{add\_values()}}
+{\footnotesize\ttfamily procedure ai\+\_\+optics\+::optics\+\_\+t\+::add\+\_\+values\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 43 of file optics.\+F90.
+
+\mbox{\Hypertarget{structai__optics_1_1optics__t_a90f48a2747dd8c509dade9e30831cc07}\label{structai__optics_1_1optics__t_a90f48a2747dd8c509dade9e30831cc07}} 
+\index{ai\_optics::optics\_t@{ai\_optics::optics\_t}!get\_values@{get\_values}}
+\index{get\_values@{get\_values}!ai\_optics::optics\_t@{ai\_optics::optics\_t}}
+\doxysubsubsection{\texorpdfstring{get\_values()}{get\_values()}}
+{\footnotesize\ttfamily procedure ai\+\_\+optics\+::optics\+\_\+t\+::get\+\_\+values\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 45 of file optics.\+F90.
+
+\mbox{\Hypertarget{structai__optics_1_1optics__t_a2c243a498050b774a296f5f287761cd1}\label{structai__optics_1_1optics__t_a2c243a498050b774a296f5f287761cd1}} 
+\index{ai\_optics::optics\_t@{ai\_optics::optics\_t}!name@{name}}
+\index{name@{name}!ai\_optics::optics\_t@{ai\_optics::optics\_t}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily procedure(\mbox{\hyperlink{interfaceai__optics_1_1property__name}{property\+\_\+name}}), deferred ai\+\_\+optics\+::optics\+\_\+t\+::name\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 37 of file optics.\+F90.
+
+\mbox{\Hypertarget{structai__optics_1_1optics__t_a46516f5a24044869b5690efb34811622}\label{structai__optics_1_1optics__t_a46516f5a24044869b5690efb34811622}} 
+\index{ai\_optics::optics\_t@{ai\_optics::optics\_t}!native\_grid@{native\_grid}}
+\index{native\_grid@{native\_grid}!ai\_optics::optics\_t@{ai\_optics::optics\_t}}
+\doxysubsubsection{\texorpdfstring{native\_grid()}{native\_grid()}}
+{\footnotesize\ttfamily procedure ai\+\_\+optics\+::optics\+\_\+t\+::native\+\_\+grid\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 39 of file optics.\+F90.
+
+\mbox{\Hypertarget{structai__optics_1_1optics__t_a4d4d934305b8bc3e53dc9d4ffef08246}\label{structai__optics_1_1optics__t_a4d4d934305b8bc3e53dc9d4ffef08246}} 
+\index{ai\_optics::optics\_t@{ai\_optics::optics\_t}!output\_grid@{output\_grid}}
+\index{output\_grid@{output\_grid}!ai\_optics::optics\_t@{ai\_optics::optics\_t}}
+\doxysubsubsection{\texorpdfstring{output\_grid()}{output\_grid()}}
+{\footnotesize\ttfamily procedure ai\+\_\+optics\+::optics\+\_\+t\+::output\+\_\+grid\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 40 of file optics.\+F90.
+
+\mbox{\Hypertarget{structai__optics_1_1optics__t_a7c568a2cdbba343c9614b35aa0a286c4}\label{structai__optics_1_1optics__t_a7c568a2cdbba343c9614b35aa0a286c4}} 
+\index{ai\_optics::optics\_t@{ai\_optics::optics\_t}!private\_constructor@{private\_constructor}}
+\index{private\_constructor@{private\_constructor}!ai\_optics::optics\_t@{ai\_optics::optics\_t}}
+\doxysubsubsection{\texorpdfstring{private\_constructor()}{private\_constructor()}}
+{\footnotesize\ttfamily procedure ai\+\_\+optics\+::optics\+\_\+t\+::private\+\_\+constructor\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Private constructor -\/ should only be called by extending types. 
+
+
+
+Definition at line 47 of file optics.\+F90.
+
+\mbox{\Hypertarget{structai__optics_1_1optics__t_a489c619ce39394fe9d01a57442337d55}\label{structai__optics_1_1optics__t_a489c619ce39394fe9d01a57442337d55}} 
+\index{ai\_optics::optics\_t@{ai\_optics::optics\_t}!private\_finalize@{private\_finalize}}
+\index{private\_finalize@{private\_finalize}!ai\_optics::optics\_t@{ai\_optics::optics\_t}}
+\doxysubsubsection{\texorpdfstring{private\_finalize()}{private\_finalize()}}
+{\footnotesize\ttfamily procedure ai\+\_\+optics\+::optics\+\_\+t\+::private\+\_\+finalize\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Private finalization -\/ should only be called by extending types. 
+
+
+
+Definition at line 49 of file optics.\+F90.
+
+\mbox{\Hypertarget{structai__optics_1_1optics__t_a27381307c5419ef900475e2d57f25974}\label{structai__optics_1_1optics__t_a27381307c5419ef900475e2d57f25974}} 
+\index{ai\_optics::optics\_t@{ai\_optics::optics\_t}!reset\_values@{reset\_values}}
+\index{reset\_values@{reset\_values}!ai\_optics::optics\_t@{ai\_optics::optics\_t}}
+\doxysubsubsection{\texorpdfstring{reset\_values()}{reset\_values()}}
+{\footnotesize\ttfamily procedure ai\+\_\+optics\+::optics\+\_\+t\+::reset\+\_\+values\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 42 of file optics.\+F90.
+
+\mbox{\Hypertarget{structai__optics_1_1optics__t_a60a32d3e4e7315e8c218ebe3566e756d}\label{structai__optics_1_1optics__t_a60a32d3e4e7315e8c218ebe3566e756d}} 
+\index{ai\_optics::optics\_t@{ai\_optics::optics\_t}!set\_values@{set\_values}}
+\index{set\_values@{set\_values}!ai\_optics::optics\_t@{ai\_optics::optics\_t}}
+\doxysubsubsection{\texorpdfstring{set\_values()}{set\_values()}}
+{\footnotesize\ttfamily procedure ai\+\_\+optics\+::optics\+\_\+t\+::set\+\_\+values\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 44 of file optics.\+F90.
+
+\mbox{\Hypertarget{structai__optics_1_1optics__t_a2813e9a69d6ca918ddae1c9c38b116d9}\label{structai__optics_1_1optics__t_a2813e9a69d6ca918ddae1c9c38b116d9}} 
+\index{ai\_optics::optics\_t@{ai\_optics::optics\_t}!units@{units}}
+\index{units@{units}!ai\_optics::optics\_t@{ai\_optics::optics\_t}}
+\doxysubsubsection{\texorpdfstring{units()}{units()}}
+{\footnotesize\ttfamily procedure(\mbox{\hyperlink{interfaceai__optics_1_1units}{units}}), deferred ai\+\_\+optics\+::optics\+\_\+t\+::units\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 38 of file optics.\+F90.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structai__optics_1_1optics__t_ab53577d21b47ea9e9c0c1d0295adb96b}\label{structai__optics_1_1optics__t_ab53577d21b47ea9e9c0c1d0295adb96b}} 
+\index{ai\_optics::optics\_t@{ai\_optics::optics\_t}!accessor\_@{accessor\_}}
+\index{accessor\_@{accessor\_}!ai\_optics::optics\_t@{ai\_optics::optics\_t}}
+\doxysubsubsection{\texorpdfstring{accessor\_}{accessor\_}}
+{\footnotesize\ttfamily class(\mbox{\hyperlink{structai__accessor_1_1accessor__t}{accessor\+\_\+t}}), pointer ai\+\_\+optics\+::optics\+\_\+t\+::accessor\+\_\+ =$>$ null( )\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Aerosol-\/model-\/specific information for calculating the optical property. 
+
+
+
+Definition at line 35 of file optics.\+F90.
+
+\mbox{\Hypertarget{structai__optics_1_1optics__t_a01919f83b83148e3bc56e7fd979b0b91}\label{structai__optics_1_1optics__t_a01919f83b83148e3bc56e7fd979b0b91}} 
+\index{ai\_optics::optics\_t@{ai\_optics::optics\_t}!do\_interpolation\_@{do\_interpolation\_}}
+\index{do\_interpolation\_@{do\_interpolation\_}!ai\_optics::optics\_t@{ai\_optics::optics\_t}}
+\doxysubsubsection{\texorpdfstring{do\_interpolation\_}{do\_interpolation\_}}
+{\footnotesize\ttfamily logical ai\+\_\+optics\+::optics\+\_\+t\+::do\+\_\+interpolation\+\_\+ = .false.\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Flag indicating whether interpolation between grids is needed. 
+
+
+
+Definition at line 28 of file optics.\+F90.
+
+\mbox{\Hypertarget{structai__optics_1_1optics__t_a3a4bbdaa742ba533234d49280c43a9a1}\label{structai__optics_1_1optics__t_a3a4bbdaa742ba533234d49280c43a9a1}} 
+\index{ai\_optics::optics\_t@{ai\_optics::optics\_t}!interpolator\_@{interpolator\_}}
+\index{interpolator\_@{interpolator\_}!ai\_optics::optics\_t@{ai\_optics::optics\_t}}
+\doxysubsubsection{\texorpdfstring{interpolator\_}{interpolator\_}}
+{\footnotesize\ttfamily type(interpolator\+\_\+t) ai\+\_\+optics\+::optics\+\_\+t\+::interpolator\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Interpolator from native grid to output grid. 
+
+
+
+Definition at line 30 of file optics.\+F90.
+
+\mbox{\Hypertarget{structai__optics_1_1optics__t_a0b277289adaa9209dad644b30f022a8a}\label{structai__optics_1_1optics__t_a0b277289adaa9209dad644b30f022a8a}} 
+\index{ai\_optics::optics\_t@{ai\_optics::optics\_t}!native\_grid\_@{native\_grid\_}}
+\index{native\_grid\_@{native\_grid\_}!ai\_optics::optics\_t@{ai\_optics::optics\_t}}
+\doxysubsubsection{\texorpdfstring{native\_grid\_}{native\_grid\_}}
+{\footnotesize\ttfamily type(\mbox{\hyperlink{structai__wavelength__grid_1_1wavelength__grid__t}{wavelength\+\_\+grid\+\_\+t}}) ai\+\_\+optics\+::optics\+\_\+t\+::native\+\_\+grid\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Wavelength grid on which the optical property is calculated. 
+
+
+
+Definition at line 24 of file optics.\+F90.
+
+\mbox{\Hypertarget{structai__optics_1_1optics__t_a78f60368b37a13f3bd28d68a0995aaf5}\label{structai__optics_1_1optics__t_a78f60368b37a13f3bd28d68a0995aaf5}} 
+\index{ai\_optics::optics\_t@{ai\_optics::optics\_t}!output\_grid\_@{output\_grid\_}}
+\index{output\_grid\_@{output\_grid\_}!ai\_optics::optics\_t@{ai\_optics::optics\_t}}
+\doxysubsubsection{\texorpdfstring{output\_grid\_}{output\_grid\_}}
+{\footnotesize\ttfamily type(\mbox{\hyperlink{structai__wavelength__grid_1_1wavelength__grid__t}{wavelength\+\_\+grid\+\_\+t}}) ai\+\_\+optics\+::optics\+\_\+t\+::output\+\_\+grid\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Wavelength grid used by the owner of the {\ttfamily \mbox{\hyperlink{structai__optics_1_1optics__t}{optics\+\_\+t}}} object. 
+
+
+
+Definition at line 26 of file optics.\+F90.
+
+\mbox{\Hypertarget{structai__optics_1_1optics__t_ac1e1e35bdd19c61b2d238aa02826a162}\label{structai__optics_1_1optics__t_ac1e1e35bdd19c61b2d238aa02826a162}} 
+\index{ai\_optics::optics\_t@{ai\_optics::optics\_t}!values\_@{values\_}}
+\index{values\_@{values\_}!ai\_optics::optics\_t@{ai\_optics::optics\_t}}
+\doxysubsubsection{\texorpdfstring{values\_}{values\_}}
+{\footnotesize\ttfamily real(kind=musica\+\_\+dk), dimension(\+:), allocatable ai\+\_\+optics\+::optics\+\_\+t\+::values\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Optical property values on the native grid (wavelength bin) 
+
+
+
+Definition at line 32 of file optics.\+F90.
+
+
+
+The documentation for this type was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/github/workspace/src/\mbox{\hyperlink{optics_8F90}{optics.\+F90}}\end{DoxyCompactItemize}

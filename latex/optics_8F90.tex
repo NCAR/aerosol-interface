@@ -1,0 +1,51 @@
+\hypertarget{optics_8F90}{}\doxysection{/github/workspace/src/optics.F90 File Reference}
+\label{optics_8F90}\index{/github/workspace/src/optics.F90@{/github/workspace/src/optics.F90}}
+
+
+The \mbox{\hyperlink{namespaceai__optics}{ai\+\_\+optics}} module.  
+
+
+\doxysubsection*{Data Types}
+\begin{DoxyCompactItemize}
+\item 
+type \mbox{\hyperlink{structai__optics_1_1optics__ptr}{ai\+\_\+optics\+::optics\+\_\+ptr}}
+\begin{DoxyCompactList}\small\item\em Pointer to optical property objects. \end{DoxyCompactList}\item 
+type \mbox{\hyperlink{structai__optics_1_1optics__t}{ai\+\_\+optics\+::optics\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em An optical property. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interfaceai__optics_1_1property__name}{ai\+\_\+optics\+::property\+\_\+name}}
+\begin{DoxyCompactList}\small\item\em Returns the name of the optical property. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interfaceai__optics_1_1units}{ai\+\_\+optics\+::units}}
+\begin{DoxyCompactList}\small\item\em Returns the units for the optical property. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Modules}
+\begin{DoxyCompactItemize}
+\item 
+module \mbox{\hyperlink{namespaceai__optics}{ai\+\_\+optics}}
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{structai__optics_1_1optics__t}{optics\+\_\+t}} type and related functions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions/\+Subroutines}
+\begin{DoxyCompactItemize}
+\item 
+subroutine \mbox{\hyperlink{namespaceai__optics_ae37b37e335e9516e5fe326a97c72d918}{ai\+\_\+optics\+::add\+\_\+values}} (this, values)
+\begin{DoxyCompactList}\small\item\em Adds values to the existing set of values for the optical property. \end{DoxyCompactList}\item 
+subroutine \mbox{\hyperlink{namespaceai__optics_a35760393ef3330ae1f6a7c11e919a310}{ai\+\_\+optics\+::get\+\_\+accessor}} (this, accessor)
+\begin{DoxyCompactList}\small\item\em Returns a pointer to the aerosol-\/model-\/specific accessor information. \end{DoxyCompactList}\item 
+subroutine \mbox{\hyperlink{namespaceai__optics_a8f648cc7ccdd8797e4c6dbb49c1671ad}{ai\+\_\+optics\+::get\+\_\+values}} (this, values)
+\begin{DoxyCompactList}\small\item\em Returns the values of the optical property on the output grid. \end{DoxyCompactList}\item 
+type(wavelength\+\_\+grid\+\_\+t) function \mbox{\hyperlink{namespaceai__optics_a6e7f78c9db1903c94637bca7c217966a}{ai\+\_\+optics\+::native\+\_\+grid}} (this)
+\begin{DoxyCompactList}\small\item\em Returns the grid on which the optical property is calculated. \end{DoxyCompactList}\item 
+subroutine \mbox{\hyperlink{namespaceai__optics_af34172fa12586ca22ee10f0c81ea0474}{ai\+\_\+optics\+::optics\+\_\+ptr\+\_\+finalize}} (this)
+\begin{DoxyCompactList}\small\item\em Finalization for \mbox{\hyperlink{structai__optics_1_1optics__t}{optics\+\_\+t}} pointer. \end{DoxyCompactList}\item 
+type(wavelength\+\_\+grid\+\_\+t) function \mbox{\hyperlink{namespaceai__optics_aab4e0c94223f4083cc739cbec64f03c3}{ai\+\_\+optics\+::output\+\_\+grid}} (this)
+\begin{DoxyCompactList}\small\item\em Returns the grid on which the optical property is output. \end{DoxyCompactList}\item 
+subroutine \mbox{\hyperlink{namespaceai__optics_a0c3129be953310c51454eb75503db91c}{ai\+\_\+optics\+::private\+\_\+constructor}} (this, native\+\_\+grid, output\+\_\+grid, accessor, interpolation\+\_\+strategy)
+\begin{DoxyCompactList}\small\item\em General constructor of \mbox{\hyperlink{structai__optics_1_1optics__t}{optics\+\_\+t}} objects. \end{DoxyCompactList}\item 
+subroutine \mbox{\hyperlink{namespaceai__optics_a7485608bc24592672e3324aba4305d98}{ai\+\_\+optics\+::private\+\_\+finalize}} (this)
+\begin{DoxyCompactList}\small\item\em Finalization for \mbox{\hyperlink{structai__optics_1_1optics__t}{optics\+\_\+t}} objects. \end{DoxyCompactList}\item 
+subroutine \mbox{\hyperlink{namespaceai__optics_a4a345dfafbb025df7a94b60c956a3487}{ai\+\_\+optics\+::reset\+\_\+values}} (this)
+\begin{DoxyCompactList}\small\item\em Resets the values of the optical property. \end{DoxyCompactList}\item 
+subroutine \mbox{\hyperlink{namespaceai__optics_aa334527f926ce32a61b4272d6b50c0ec}{ai\+\_\+optics\+::set\+\_\+values}} (this, values)
+\begin{DoxyCompactList}\small\item\em Sets the values of the optical property on the native grid. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{namespaceai__optics}{ai\+\_\+optics}} module. 
+
