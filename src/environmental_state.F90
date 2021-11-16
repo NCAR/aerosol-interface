@@ -58,7 +58,7 @@ contains
 
     real(kind=musica_dk) :: rand_val
 
-    !> \todo make sure random environmental values are reasonable
+    !> \todo make sure ranges of random environmental values are reasonable
     call random_number( rand_val )
     this%layer_thickness__Pa_ = rand_val * 50.0 + 50.0
 

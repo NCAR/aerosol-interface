@@ -14,6 +14,8 @@ module ai_optics_single_scatter_albedo
 
   public :: optics_single_scatter_albedo_t
 
+  !> \todo is "single-scatter albedo" the correct name/units for the
+  !!       shortwave property returned to radiation?
   type, extends(optics_t) :: optics_single_scatter_albedo_t
   contains
     procedure :: name => property_name
@@ -65,8 +67,6 @@ contains
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
   !> Returns the units of the optical property
-  !!
-  !! \todo review units
   type(string_t) function units( this )
 
     use musica_string,                 only : string_t

@@ -14,6 +14,9 @@ module ai_optics_absorption_optical_depth
 
   public :: optics_absorption_optical_depth_t
 
+  !> \todo is "absorption optical depth" (unitless) the correct name/units
+  !!       for the longwave optical property returned to radiation? Is this
+  !!       consistent with the shortwave property naming?
   type, extends(optics_t) :: optics_absorption_optical_depth_t
   contains
     procedure :: name => property_name
@@ -65,8 +68,6 @@ contains
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
   !> Returns the units of the optical property
-  !!
-  !! \todo review units
   type(string_t) function units( this )
 
     use musica_string,                 only : string_t

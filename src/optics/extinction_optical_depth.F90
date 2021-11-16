@@ -14,6 +14,8 @@ module ai_optics_extinction_optical_depth
 
   public :: optics_extinction_optical_depth_t
 
+  !> \todo is "extinction optical depth" (unitless) the correct name/units
+  !!       for the shortwave optical property returned to radiation?
   type, extends(optics_t) :: optics_extinction_optical_depth_t
   contains
     procedure :: name => property_name
@@ -65,8 +67,6 @@ contains
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
   !> Returns the units of the optical property
-  !!
-  !! \todo review units
   type(string_t) function units( this )
 
     use musica_string,                 only : string_t
