@@ -1,5 +1,8 @@
 !> \mainpage aerosol interface documentation
-!! The aerosol-interface provides general API for aerosol packages
+!! The aerosol-interface library provides general API for aerosol packages
+!!
+!! The library is currently under development. This is a working draft
+!! of the documentation.
 !!
 !! \htmlonly
 !! <div class="row"><div class="col-sm-4">
