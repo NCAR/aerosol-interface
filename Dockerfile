@@ -7,7 +7,7 @@ RUN dnf -y update \
         netcdf-fortran-devel \
         cmake \
         make \
-        gcovr \
+        lcov \
         valgrind \
     && dnf clean all
 
